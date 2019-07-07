@@ -15,10 +15,6 @@ const addPhoto = () =>{
 const checkPhotoInput = () =>{
 	const image = document.querySelector("#file").files[0];
 	const output = document.querySelector('#output')
-	console.log(image.width, image.height)
-	if(image.height> image.width){
-		return alert('Please upload file, which height is not bigger than its width!')
-	}
 	if(image instanceof File){
 		output.src = URL.createObjectURL(image)
 		output.style.display="block";
@@ -31,7 +27,7 @@ const checkPhotoInput = () =>{
 checkPhotoInput()
 
 //check value of range fields in languages section
-window.displayRange =  () =>{
+const displayRange = () =>{
 const range1= document.querySelector('#lang1__range')
 const output1= document.querySelector('#lang1__output')
 output1.innerHTML=range1.value
