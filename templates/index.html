@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Michal Antczak">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://royalcvmaker.herokuapp.com/templates/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montez|Poiret+One|Iceberg|Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+</head>
+<body>
+	<div class="frame">
+	<section class="frame__side">
+		<div class="frame__side--photo">
+			<div class="frame__side--photo-box">
+				<img src="https://royalcvmaker.herokuapp.com/tmp/my-uploads/me.jpg" alt="myself" />
+			</div>
+		</div>
+		
+		<div class="frame__side--section" id="fit">
+			<h1 class="frame__side--section-header">Contact</h1>
+			<div class="frame__side--section-content" >
+				<p class='contact'><i class="fas fa-phone contact__phone"></i>{{phone}}</p>
+				<p class='contact'><i class="fas fa-envelope contact__mail"></i>{{email}}</p>
+				<p class='contact'><i class="fas fa-map-pin contact__place"></i>{{address}}</p>
+			</div>
+		</div>
+
+		<div class="frame__side--section" id="fit">
+			<h1 class="frame__side--section-header">About me</h1>
+			<div class="frame__side--section-content">
+				<p>{{about}}</p>
+
+			</div>
+		</div>
+
+		<div class="frame__side--section" id="min-height fit">
+			<h1 class="frame__side--section-header">Languages</h1>
+			<div class="frame__side--section-centerContent">
+				{{#lang}}
+					<div class='lang1'>
+						<div class='lang1__strip' style="width:{{level}}"></div>
+						<p class="lang1__text">{{language}}</p>
+					</div>
+				{{/lang}}
+			</div>
+		</div>
+
+		<div class="frame__side--section" id="fit">
+			<h1 class="frame__side--section-header">Interests</h1>
+			<div class="frame__side--section-interestsContent">
+				<ul>
+					{{#hobbies}}
+					<li><i class="fas fa-check"></i>{{hobby}}</li>
+					{{/hobbies}}
+				</ul>
+
+			</div>
+		</div>
+	</section>
+	<section class="frame__main">
+		<header class="frame__main--header">
+			<h1>{{name}}</h1>
+			<!-- <h2><i class='fas fa-globe'></i> www.michalantczak.com</h2> -->
+		</header>
+		<div class="frame__main--work">		
+				<span class='icon-wrapper-green'><i class="fas fa-handshake icon"></i></span>	
+				<h1 class="frame__main--work-header">Professional experience</h1>
+				{{#jobs}}
+				<div class="frame__main--work-date"><span>{{start}}</span> <span>{{stop}}</span></div>
+				<p class="frame__main--work-description">
+					<span class="frame__main--work-description-who">{{position}}</span>
+					<span class="frame__main--work-description-where">{{company}}</span>
+					<span class="frame__main--work-description-what">{{description}}</span>
+				</p>
+				{{/jobs}}
+		</div>
+		<div class="frame__main--education">
+			<span class='icon-wrapper-blue'><i class="fas fa-graduation-cap icon"></i></span>
+			<h1 class="frame__main--education-header">Education</h1>
+			{{#schools}}
+			<div class="frame__main--education-date"><span>{{start}}</span> <span>{{stop}}</span></div>
+			<p class="frame__main--education-description">
+				<span class="frame__main--education-description-who">{{profile}}</span>
+				<span class="frame__main--education-description-where">{{school}}</span>
+				<span class="frame__main--education-description-what">{{description}}</span>
+			</p>
+			{{/schools}}
+			<!-- <div class="frame__main--education-date"><span>September 2000</span> <span>June 2004</span></div>
+			<p class="frame__main--education-description">
+				<span class="frame__main--education-description-who">Informatics</span>
+				<span class="frame__main--education-description-where">High School St.Staszic, Zgierz, Poland</span>
+				<span class="frame__main--education-description-what">equivalent of VWO diploma</span>
+			</p> -->
+		</div>
+		<div class="frame__main--additional">
+			<span class='icon-wrapper-pink'><i class="fas fa-lightbulb icon"></i></span>
+			<h1 class="frame__main--additional-header">Additional skills</h1>
+			
+		</div>
+		<ul class="frame__main--list">
+			{{#skills}}
+			<li><i class="far fa-check-circle"></i>{{skill}}</li>
+			{{/skills}}
+		</ul>
+	</section>
+	</div>
+	
+	
+</body>
+</html>

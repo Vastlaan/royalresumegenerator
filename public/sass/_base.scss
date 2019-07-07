@@ -1,0 +1,33 @@
+::-webkit-scrollbar{
+	display: none;
+}
+*,
+*::after,
+*::before{
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+	scrollbar-width: none;
+}
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@include respond(m) {
+		font-size: 50%;
+	}
+	@include respond(s) {
+		font-size: 45%;
+	}
+	@include respond(xs) {
+		font-size: 40%;
+	}
+	@include respond(xxl) {
+		font-size: 100%;
+	}
+}
+body{
+	width:100vw;
+	background-color: $color-grey-light;
+}

@@ -1,0 +1,513 @@
+.form{
+	width:90%;
+	margin:5rem auto;
+	padding:2rem;
+	border:1px solid $color-grey-light;
+	box-shadow: 0 0 1rem rgba(0,0,0,.3);
+	display:flex;
+	flex-direction: column;
+	background-color: #eee;
+
+
+	&__photo{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		p{
+			text-align: center;
+			font-family: $font-poiret;
+			font-size: 1.2rem;
+			color:black;
+			margin-top: 5rem;
+		}
+
+		&--header{
+			@include formSectionHeader
+		}
+		&--input{
+
+			margin:2rem auto;
+			width:50%;
+			position:relative;
+
+			@include respond(m){
+				width:70%;
+			}
+			@include respond(s){
+				width:90%;
+			}
+			@include respond(xs){
+				width:100%;
+			}
+
+			label{
+				display:block;
+				color:$color-blue-light;
+				cursor:pointer;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+				i{
+					font-size: 5rem;
+				}
+			}
+			input{
+				display:block;
+				position:absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+				opacity:0;
+				cursor:pointer;
+				height:5rem;
+			}
+			p{
+				@include formSectionPara
+				position:absolute;
+				bottom:-5rem;
+				left:0;
+			}
+		}
+
+		&--outputBox{
+			width: calc((100vw*0.35)*0.8);
+			//height: calc((100vw*0.35)*0.8);
+			// border-radius: 50%;
+			margin: 1rem auto;
+			overflow: hidden;
+			border:1px solid rgba($color-blue,.3);
+			box-shadow: 1rem 1rem 1rem rgba(0,0,0,.3);
+
+			&-output{
+				display:none;
+				width: 100%;
+				margin:0 auto; 
+			}
+		}
+
+	}
+
+	&__contact{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+		&--input{
+
+			margin:2rem auto;
+			width:50%;
+
+			@include respond(m){
+				width:70%;
+			}
+			@include respond(s){
+				width:90%;
+			}
+			@include respond(xs){
+				width:100%;
+			}
+
+			label{
+				@include formSectionLabel
+			}
+			input{
+				text-align: center;
+				display:inline-block;
+				width:70%;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
+		}
+
+	}
+
+	&__about{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+		label{
+			@include formSectionLabel
+			width:100%;
+			text-align: center;
+			margin: 1rem auto;
+		}
+		textarea{
+			text-align: center;
+			display:block;
+			width:70%;
+			height:15rem;
+			margin:0 auto;
+			padding:2rem;
+			border:1px solid rgba($color-blue,.3);
+			box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+			&:focus{
+				outline:none;
+			}
+		}
+		p{
+			@include formSectionPara
+		}
+	}
+
+	&__lang{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+		label{
+			@include formSectionLabel
+			width:auto;
+			text-align: center;
+			margin: 0 1rem;
+		}
+		&--input{
+			margin-top: 2rem;
+			&-1{
+				display:inline-block;
+				width:30%;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+				&:focus{
+					outline:none;
+				}
+			}
+			&-2{
+				display:inline-block;
+				&:focus{
+					outline:none;
+				}
+			}
+		}
+		p{
+			@include formSectionPara1
+			margin-bottom: 2rem;
+		}
+		span{
+			font-size: 2rem;
+			margin:0 2rem;
+		}
+
+		&--btn{
+
+			margin:5rem auto 0 auto;
+			padding:.2rem 3rem;
+			background-color: $color-blue-light;
+			border-radius: 3px;
+			font-family: $font-rajdhani;
+			font-size: 2.2rem;
+			color:white;
+			cursor:pointer;
+			
+		}
+	}
+
+	&__interests{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+
+		span{
+			@include formSectionPara1
+		}
+
+		&--input{
+
+			margin:2rem auto;
+			width:100%;
+
+			
+
+			label{
+				@include formSectionLabel
+			}
+			input{
+				text-align: center;
+				display:inline-block;
+				width:70%;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
+		}
+	}
+
+	&__work{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+
+		span{
+			@include formSectionPara1
+		}
+
+		&--input{
+
+			margin:2rem auto;
+			width:100%;
+
+			@include respond(m){
+				width:70%;
+			}
+			@include respond(s){
+				width:90%;
+			}
+			@include respond(xs){
+				width:100%;
+			}
+			
+			h1{
+				display:inline-block;
+				font-size: 2.4rem;
+				font-family: $font-iceberg;
+				text-align: left;
+				margin-left: 5rem;
+				border-bottom: 1px solid $color-purple;
+				border-right: 1px solid $color-purple;
+				padding:2rem;
+			}
+			label{
+				@include formSectionLabel
+				width:100%;
+				text-align: center;
+				margin: 2.5rem auto;
+			}
+			input{
+				text-align: center;
+				display:block;
+				width:70%;
+				margin:0 auto;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			textarea{
+				text-align: center;
+				display:block;
+				width:70%;
+				height:10rem;
+				margin:0 auto;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
+		}
+	}
+
+	&__education{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+
+		span{
+			@include formSectionPara1
+		}
+
+		&--input{
+
+			margin:2rem auto;
+			width:100%;
+
+			@include respond(m){
+				width:70%;
+			}
+			@include respond(s){
+				width:90%;
+			}
+			@include respond(xs){
+				width:100%;
+			}
+			
+			h1{
+				display:inline-block;
+				font-size: 2.4rem;
+				font-family: $font-iceberg;
+				text-align: left;
+				margin-left: 5rem;
+				border-bottom: 1px solid $color-purple;
+				border-right: 1px solid $color-purple;
+				padding:2rem;
+			}
+			label{
+				@include formSectionLabel
+				width:100%;
+				text-align: center;
+				margin: 2.5rem auto;
+			}
+			input{
+				text-align: center;
+				display:block;
+				width:70%;
+				margin:0 auto;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
+		}
+	}
+	&__skills{
+		display:flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+
+		&--header{
+			@include formSectionHeader
+		}
+
+		span{
+			@include formSectionPara1
+		}
+
+		&--input{
+
+			margin:2rem auto;
+			width:100%;
+
+			label{
+				@include formSectionLabel
+			}
+			input{
+				text-align: center;
+				display:inline-block;
+				width:70%;
+				padding:.5rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
+		}
+	}
+
+	&__submit{
+		display:block;
+		width:30rem;
+		margin:2.5rem auto;
+		padding:.5rem 2rem;
+		border:none;
+		border-radius: 3px;
+		background-color: $color-blue;
+		font-family: $font-poiret;
+		font-size: 2rem;
+		letter-spacing: .3rem;
+		color:white;
+		text-transform: uppercase;
+		cursor:pointer;
+		box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
+		transition: all .2s;
+
+		&:hover{
+			transform:translateY(-.2rem);
+			box-shadow: 0 1.3rem 1rem rgba(0,0,0,.2);
+		}
+
+	}
+}
+
+#lang1{
+
+	&__lang{
+
+	}
+
+	&__range{
+
+	}
+
+	&__output{
+
+	}
+}
+#lang2{
+	display: none;
+
+	&__lang{
+		
+	}
+
+	&__range{
+
+	}
+
+	&__output{
+		
+	}
+}
+#lang3{
+	display: none;
+
+	&__lang{
+		
+	}
+
+	&__range{
+
+	}
+
+	&__output{
+		
+	}
+}

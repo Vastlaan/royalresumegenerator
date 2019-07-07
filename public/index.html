@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Free Resume Generator</title>
+	<link href="https://fonts.googleapis.com/css?family=Montez|Poiret+One|Iceberg|Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+	<nav class='nav'>
+		<div class='nav__left'>
+			<i class="nav__left--icon fas fa-info-circle "></i>
+		</div>
+		<div class='nav__right'>
+			<i class="nav__right--icon fas fa-info-circle "></i>
+		</div>
+		
+	</nav>
+	<header class='header'>
+			<h1 class='header__title'>Create Your Own</h1>
+			<h1 class='header__title'>Outstanding Resume</h1>
+	</header>
+
+	<form class='form' onSubmit='submitForm(event)'>
+
+		<div class='form__photo'>
+			<h3 class='form__photo--header'>Section photo</h3>
+			<div class='form__photo--input'>
+				<label for='file'><i class="fas fa-upload"></i></label>
+				<input type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>
+				<p>Choose a file to upload. Allowed formats JPG, JPEG, PNG.</p>
+			</div>
+			<p id='photo--info'></p>
+			<div class='form__photo--outputBox'>
+				<img src="" alt="person" class='form__photo--outputBox-output' id='output'/>
+			</div>
+			
+		</div>
+
+		<div class='form__contact'>
+			<h3 class='form__contact--header'>Section Contact</h3>
+			<div class='form__contact--input'>
+				<label>Name: </label>
+				<input type="text" name='name' maxlength='19' required/>
+				<p>Please enter your full name. Maximum 19 characters.</p>
+			</div>
+			<div class='form__contact--input'>
+				<label>Email: </label>
+				<input type="email" name='email' maxlength='25' required/>
+				<p>Please enter your email address. Maximum 25 characters.</p>
+			</div>
+			<div class='form__contact--input'>
+				<label>Phone: </label>
+				<input type="tel" name='phone' maxlength='20' required/>
+				<p>Please enter your phone number. Maximum 20 characters.</p>
+			</div>
+			<div class='form__contact--input'>
+				<label>Address: </label>
+				<input type="text" name='address' maxlength='25' required/>
+				<p>Please fill in city and/or country you live in.</p>
+				<p>Example: "Houston, United States" Maximum 25 characters.</p>
+			</div>
+		</div>
+
+		<div class='form__about'>
+			<h3 class='form__about--header'>Section About me</h3>
+			<div class='form__about--input'>
+				<label>Describe yourself:</label>
+				<textarea type="text" name='about' minlength='250' maxlength='420' required></textarea>
+				<p>Please describe your person. From 250 to 420 characters.</p>
+			</div>
+		</div>
+
+		<div class='form__lang'>
+			<h3 class='form__lang--header'>Section Languages</h3>
+			<p>Please choose at least 1 and at most 3 languages you speak and add level of proficiency.</p>
+			<div class='form__lang--input' id="lang1">
+				<label>Language:</label>
+				<input class='form__lang--input-1' id="lang1__lang" type="text" name="lang" maxlength="12" required>
+				<label>Level:</label>
+				<input class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+				<span id="lang1__output"></span>
+			</div>
+			<div class='form__lang--input' id="lang2">
+				<label>Language:</label>
+				<input class='form__lang--input-1' id="lang2__lang" type="text" name="lang" maxlength="12">
+				<label>Level:</label>
+				<input class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+				<span id="lang2__output"></span>
+			</div>
+			<div class='form__lang--input' id="lang3">
+				<label>Language:</label>
+				<input class='form__lang--input-1' id="lang3__lang" type="text" name="lang" maxlength="12">
+				<label>Level:</label>
+				<input class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
+				<span id="lang3__output"></span>
+			</div>
+			<div class='form__lang--btn' id="lang__btn" onClick="moreLanguageField()">More</div>
+		</div>
+
+		<div class='form__interests'>
+			<h3 class='form__interests--header'>Section Interests</h3>
+			<span>Please fill in at least 1 and at most 4 personal interests/hobbies.</span>
+			<div class='form__interests--input'>
+				<label>Hobby nr. 1:</label>
+				<input class='hobby' type="text" name='interests' maxlength='20' required />
+				<p>Maximum 20 characters.</p>
+			</div>
+			<div class='form__interests--input'>
+				<label>Hobby nr. 2:</label>
+				<input class='hobby' type="text" name='interests' maxlength='20' />
+				<p>Maximum 20 characters. Leave it empty to skip. </p>
+			</div>
+			<div class='form__interests--input'>
+				<label>Hobby nr. 3:</label>
+				<input class='hobby' type="text" name='interests' maxlength='20' />
+				<p>Maximum 20 characters. Leave it empty to skip. </p>
+			</div>
+			<div class='form__interests--input'>
+				<label>Hobby nr. 4:</label>
+				<input class='hobby' type="text" name='interests' maxlength='20' />
+				<p>Maximum 20 characters. Leave it empty to skip. </p>
+			</div>
+		</div>
+
+		<div class='form__work'>
+			<h3 class='form__work--header'>Section Professional Experience</h3>
+			<span>
+				Please fill in your last (or most important) two job positions. 
+				If you don't have a lot of work experience, you had only one job or didn't have any, please consider including any other job-like activities, for example volunteering, important school projects etc.
+			</span>
+			<div class='form__work--input'>
+				<h1>Job nr. 1</h1>
+				<label>Position: </label>
+				<input type="text" name='work' id='position-1' maxlength='25' required/>
+				<p>Please enter your job function. Maximum 25 characters.</p>
+				<label>Company: </label>
+				<input type="text" name='work' id='company-1' maxlength='35' required/>
+				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
+				<label>Describe your job: </label>
+				<textarea type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
+				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
+				<label>When did you START working: </label>
+				<input type="text" name='work' id='start-1' maxlength='14' required/>
+				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
+				<label>When did you STOP working: </label>
+				<input type="text" name='work' id='stop-1' maxlength='14' required/>
+				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
+			</div>
+			<div class='form__work--input'>
+				<h1>Job nr. 2</h1>
+				<label>Position: </label>
+				<input type="text" name='work' id='position-2' maxlength='25' required/>
+				<p>Please enter your job function. Maximum 25 characters.</p>
+				<label>Company: </label>
+				<input type="text" name='work' id='company-2' maxlength='35' required/>
+				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
+				<label>Describe your job: </label>
+				<textarea type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
+				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
+				<label>When did you START working: </label>
+				<input type="text" name='work' id='start-2' maxlength='14' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<label>When did you STOP working: </label>
+				<input type="text" name='work' id='stop-2' maxlength='14' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+			</div>
+		</div>
+
+		<div class='form__education'>
+			<h3 class='form__education--header'>Section Education</h3>
+			<span>Please fill in your last two graduated schools/universities.</span>
+			<div class='form__education--input'>
+				<h1>School nr. 1</h1>
+				<label>Profile: </label>
+				<input type="text" name='education' maxlength='25' id='profile-1' required/>
+				<p>Please enter profile of your class. Maximum 25 characters.</p>
+				<label>School/Univeristy name: </label>
+				<input type="text" name='education' maxlength='35' id='school-1' required/>
+				<p>Name and localization of school where you were taking classes. Maximum 35 characters.</p>
+				<label>Diplomas/Accomplishments: </label>
+				<input type="text" name='work' id='school-description-1'  maxlength='50' required />
+				<p>Please add type of diploma you have obtained and/or other important accomplishments. Maximum 50 characters.</p>
+				<label>When did you START education: </label>
+				<input type="text" name='education' maxlength='14' id='school-start-1' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<label>When did you STOP education: </label>
+				<input type="text" name='education' maxlength='14' id='school-stop-1' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+			</div>
+			<div class='form__education--input'>
+				<h1>School nr. 2</h1>
+				<label>Profile: </label>
+				<input type="text" name='education' maxlength='25' id='profile-2' required/>
+				<p>Please enter profile of your class. Maximum 25 characters.</p>
+				<label>School/Univeristy name: </label>
+				<input type="text" name='education' maxlength='35' id='school-2' required/>
+				<p>Name and localization of school where you were taking classes. Maximum 35 characters.</p>
+				<label>Diplomas/Accomplishments: </label>
+				<input type="text" name='work' id='school-description-2'  maxlength='50' required />
+				<p>Please add type of diploma you have obtained and/or other important accomplishments. Maximum 50 characters.</p>
+				<label>When did you START education: </label>
+				<input type="text" name='education' maxlength='14' id='school-start-2' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<label>When did you STOP education: </label>
+				<input type="text" name='education' maxlength='14' id='school-stop-2' required/>
+				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+			</div>
+		</div>
+
+		<div class='form__skills'>
+			<h3 class='form__skills--header'>Section Additional Skills</h3>
+			<span>Please fill in at least 1 and at most 4 additional (soft) skills. For example: problem-solving, Ability to teach and mentor, but also: drive license, excelent Adobe Photoshop skills etc.</span>
+			<div class='form__skills--input'>
+				<label>Skill nr. 1:</label>
+				<input class='skill' type="text" name='skills' maxlength='50' required />
+				<p>Maximum 50 characters.</p>
+			</div>
+			<div class='form__skills--input'>
+				<label>Skill nr. 2:</label>
+				<input class='skill' type="text" name='skills' maxlength='50' />
+				<p>Maximum 50 characters. Leave it empty to skip. </p>
+			</div>
+			<div class='form__skills--input'>
+				<label>Skill nr. 3:</label>
+				<input class='skill' type="text" name='skills' maxlength='50' />
+				<p>Maximum 50 characters. Leave it empty to skip. </p>
+			</div>
+			<div class='form__skills--input'>
+				<label>Skill nr. 4:</label>
+				<input class='skill' type="text" name='skills' maxlength='50' />
+				<p>Maximum 50 characters. Leave it empty to skip. </p>
+			</div>
+		</div>
+		
+		<button name='submit' class="form__submit" href=''>Create Resume.pdf</button>
+
+	</form>
+
+	<script src='/scripts/script.js'></script>
+</body>
+</html>

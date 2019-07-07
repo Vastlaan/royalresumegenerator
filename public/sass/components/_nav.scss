@@ -1,0 +1,27 @@
+.nav{
+	width:100%;
+	background-color: $color-blue;
+	height:5rem;
+	display:flex;
+	justify-content: space-between;
+	padding:1rem;
+	
+	&__left{
+		color:white;
+		display:flex;
+		&--icon{
+			display: block;
+			font-size: 3rem;
+			cursor:pointer;	
+		}
+	}
+	&__right{
+		color:white;
+		display:flex;
+		&--icon{
+			display: block;
+			font-size: 3rem;
+			cursor:pointer;
+		}
+	}
+}

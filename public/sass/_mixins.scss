@@ -1,0 +1,63 @@
+
+@mixin respond($breakpoint){
+
+	@if $breakpoint=='m'{
+		@media only screen and(max-width:50em){@content}
+	}
+
+	@if $breakpoint=='s'{
+		@media only screen and(max-width:37.5em){@content}
+	}
+
+	@if $breakpoint=='xs'{
+		@media only screen and(max-width:25em){@content}
+	}
+
+	@if $breakpoint=='xxl'{
+		@media only screen and(min-width:100em){@content}
+	}
+}
+
+@mixin formSectionHeader{
+	margin:1rem;
+	font-family: $font-rajdhani;
+	font-size: 3.5rem;
+	text-align: center;
+	letter-spacing: .3rem;
+	color:$color-blue-dark;
+	text-transform: uppercase;
+	text-shadow: .3rem .3rem .5rem rgba(0,0,0,.3);
+	border-bottom: 1px solid rgba($color-blue-dark,.3);
+}
+
+@mixin formSectionLabel{
+	display:inline-block;
+	width:20%;
+	font-family: $font-iceberg;
+	font-size: 2.8rem;
+	text-align: right;
+	margin-right: 1rem;
+}
+
+@mixin formSectionPara{
+	display:block;
+	width:100%;
+	font-family: "Courier New", sans-sefir;
+	font-size: 1.2rem;
+	color:$color-red;
+	text-align: center;
+}
+
+@mixin formSectionPara1{
+	display:inline-block;
+	background-color: $color-purple;
+	font-family: $font-poiret;
+	font-size: 1.4rem;
+	letter-spacing: .2rem;
+	color:white;
+	text-align: center;
+	width:80%;
+	margin:0 auto;
+	border-radius: 3px;
+	padding:1rem;
+}
