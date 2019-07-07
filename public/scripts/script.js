@@ -31,7 +31,7 @@ const checkPhotoInput = () =>{
 checkPhotoInput()
 
 //check value of range fields in languages section
-const displayRange = () =>{
+window.displayRange =  () =>{
 const range1= document.querySelector('#lang1__range')
 const output1= document.querySelector('#lang1__output')
 output1.innerHTML=range1.value
