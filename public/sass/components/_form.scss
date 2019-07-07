@@ -21,7 +21,7 @@
 		p{
 			text-align: center;
 			font-family: $font-poiret;
-			font-size: 1.2rem;
+			font-size: 1.8rem;
 			color:black;
 			margin-top: 6rem;
 		}
@@ -146,28 +146,31 @@
 		&--header{
 			@include formSectionHeader
 		}
-		label{
-			@include formSectionLabel
-			width:100%;
-			text-align: center;
-			margin: 1rem auto;
-		}
-		textarea{
-			text-align: center;
-			display:block;
-			width:70%;
-			height:15rem;
-			margin:0 auto;
-			padding:2rem;
-			border:1px solid rgba($color-blue,.3);
-			box-shadow: 0 0 1rem rgba(0,0,0,.3);
+		&--input{
 
-			&:focus{
-				outline:none;
+			label{
+				@include formSectionLabel
+				width:100%;
+				text-align: center;
+				margin: 1rem auto;
 			}
-		}
-		p{
-			@include formSectionPara
+			textarea{
+				text-align: center;
+				display:block;
+				width:70%;
+				height:15rem;
+				margin:0 auto;
+				padding:2rem;
+				border:1px solid rgba($color-blue,.3);
+				box-shadow: 0 0 1rem rgba(0,0,0,.3);
+
+				&:focus{
+					outline:none;
+				}
+			}
+			p{
+				@include formSectionPara
+			}
 		}
 	}
 
@@ -453,6 +456,7 @@
 
 			label{
 				@include formSectionLabel
+				text-align: center;
 			}
 			input{
 				text-align: center;

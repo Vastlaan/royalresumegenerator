@@ -26,7 +26,7 @@ html {
       font-size: 100%; } }
 
 body {
-  width: 100vw;
+  width: 100%;
   background-color: #d3d3d3; }
 
 .nav {
@@ -90,7 +90,7 @@ body {
     .form__photo p {
       text-align: center;
       font-family: "Poiret One", cursive;
-      font-size: 1.2rem;
+      font-size: 1.8rem;
       color: black;
       margin-top: 6rem; }
     .form__photo--header {
@@ -218,7 +218,7 @@ body {
       text-transform: uppercase;
       text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
-    .form__about label {
+    .form__about--input label {
       display: inline-block;
       width: 35%;
       font-family: "Iceberg", cursive;
@@ -228,7 +228,7 @@ body {
       width: 100%;
       text-align: center;
       margin: 1rem auto; }
-    .form__about textarea {
+    .form__about--input textarea {
       text-align: center;
       display: block;
       width: 70%;
@@ -237,9 +237,9 @@ body {
       padding: 2rem;
       border: 1px solid rgba(0, 52, 89, 0.3);
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
-      .form__about textarea:focus {
+      .form__about--input textarea:focus {
         outline: none; }
-    .form__about p {
+    .form__about--input p {
       display: block;
       width: 100%;
       font-family: "Courier New", sans-sefir;
@@ -576,7 +576,8 @@ body {
         font-family: "Iceberg", cursive;
         font-size: 3.8rem;
         text-align: right;
-        margin-right: 1rem; }
+        margin-right: 1rem;
+        text-align: center; }
       .form__skills--input input {
         text-align: center;
         display: inline-block;
