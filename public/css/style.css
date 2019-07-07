@@ -61,7 +61,7 @@ body {
   align-items: center; }
   .header__title {
     font-family: "Poiret One", cursive;
-    font-size: 6.5rem;
+    font-size: 7rem;
     font-weight: 300;
     letter-spacing: .5rem;
     color: white;
@@ -80,6 +80,9 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #eee; }
+  @media only screen and (max-width: 37.5em) {
+    .form {
+      width: 100%; } }
   .form__photo {
     display: flex;
     flex-direction: column;
@@ -89,11 +92,11 @@ body {
       font-family: "Poiret One", cursive;
       font-size: 1.2rem;
       color: black;
-      margin-top: 5rem; }
+      margin-top: 6rem; }
     .form__photo--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -136,11 +139,11 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center;
         position: absolute;
-        bottom: -5rem;
+        bottom: -6rem;
         left: 0; }
     .form__photo--outputBox {
       width: calc((100vw*0.35)*0.8);
@@ -159,7 +162,7 @@ body {
     .form__contact--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -180,15 +183,15 @@ body {
           width: 100%; } }
       .form__contact--input label {
         display: inline-block;
-        width: 20%;
+        width: 35%;
         font-family: "Iceberg", cursive;
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: right;
         margin-right: 1rem; }
       .form__contact--input input {
         text-align: center;
         display: inline-block;
-        width: 70%;
+        width: 60%;
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
@@ -198,7 +201,7 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
   .form__about {
@@ -208,7 +211,7 @@ body {
     .form__about--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -217,9 +220,9 @@ body {
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
     .form__about label {
       display: inline-block;
-      width: 20%;
+      width: 35%;
       font-family: "Iceberg", cursive;
-      font-size: 2.8rem;
+      font-size: 3.8rem;
       text-align: right;
       margin-right: 1rem;
       width: 100%;
@@ -240,7 +243,7 @@ body {
       display: block;
       width: 100%;
       font-family: "Courier New", sans-sefir;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: #AF040F;
       text-align: center; }
   .form__lang {
@@ -250,7 +253,7 @@ body {
     .form__lang--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -259,26 +262,42 @@ body {
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
     .form__lang label {
       display: inline-block;
-      width: 20%;
+      width: 35%;
       font-family: "Iceberg", cursive;
-      font-size: 2.8rem;
+      font-size: 3.8rem;
       text-align: right;
       margin-right: 1rem;
       width: auto;
       text-align: center;
       margin: 0 1rem; }
+      @media only screen and (max-width: 37.5em) {
+        .form__lang label {
+          font-size: 3rem; } }
     .form__lang--input {
       margin-top: 2rem; }
       .form__lang--input-1 {
         display: inline-block;
-        width: 30%;
+        width: 20%;
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
+        @media only screen and (max-width: 37.5em) {
+          .form__lang--input-1 {
+            width: 70%; } }
+        @media only screen and (max-width: 25em) {
+          .form__lang--input-1 {
+            width: 60%; } }
         .form__lang--input-1:focus {
           outline: none; }
       .form__lang--input-2 {
-        display: inline-block; }
+        display: inline-block;
+        width: 20%; }
+        @media only screen and (max-width: 37.5em) {
+          .form__lang--input-2 {
+            width: 70%; } }
+        @media only screen and (max-width: 25em) {
+          .form__lang--input-2 {
+            width: 60%; } }
         .form__lang--input-2:focus {
           outline: none; }
     .form__lang p {
@@ -309,11 +328,12 @@ body {
   .form__interests {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    text-align: center; }
     .form__interests--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -337,15 +357,18 @@ body {
       width: 100%; }
       .form__interests--input label {
         display: inline-block;
-        width: 20%;
+        width: 35%;
         font-family: "Iceberg", cursive;
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: right;
-        margin-right: 1rem; }
+        margin-right: 1rem;
+        width: auto;
+        margin: auto; }
       .form__interests--input input {
+        height: 4rem;
         text-align: center;
         display: inline-block;
-        width: 70%;
+        width: 50%;
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
@@ -355,7 +378,7 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
   .form__work {
@@ -365,7 +388,7 @@ body {
     .form__work--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -407,9 +430,9 @@ body {
         padding: 2rem; }
       .form__work--input label {
         display: inline-block;
-        width: 20%;
+        width: 35%;
         font-family: "Iceberg", cursive;
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: right;
         margin-right: 1rem;
         width: 100%;
@@ -440,7 +463,7 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
   .form__education {
@@ -450,7 +473,7 @@ body {
     .form__education--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -492,9 +515,9 @@ body {
         padding: 2rem; }
       .form__education--input label {
         display: inline-block;
-        width: 20%;
+        width: 35%;
         font-family: "Iceberg", cursive;
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: right;
         margin-right: 1rem;
         width: 100%;
@@ -514,17 +537,18 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
   .form__skills {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    text-align: center; }
     .form__skills--header {
       margin: 1rem;
       font-family: "Rajdhani", sans-serif;
-      font-size: 3.5rem;
+      font-size: 5rem;
       text-align: center;
       letter-spacing: .3rem;
       color: #00171F;
@@ -548,9 +572,9 @@ body {
       width: 100%; }
       .form__skills--input label {
         display: inline-block;
-        width: 20%;
+        width: 35%;
         font-family: "Iceberg", cursive;
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-align: right;
         margin-right: 1rem; }
       .form__skills--input input {
@@ -566,7 +590,7 @@ body {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
   .form__submit {

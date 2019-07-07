@@ -6,7 +6,7 @@
 	<meta name="author" content="Michal Antczak">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="https://royalcvmaker.herokuapp.com/templates/style.css">
+	<link rel="stylesheet" type="text/css" href="{{root}}/templates/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montez|Poiret+One|Iceberg|Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" >
 </head>
@@ -15,28 +15,28 @@
 	<section class="frame__side">
 		<div class="frame__side--photo">
 			<div class="frame__side--photo-box">
-				<img src="https://royalcvmaker.herokuapp.com/tmp/my-uploads/me.jpg" alt="myself" />
+				<img src="{{root}}/tmp/my-uploads/me.jpg" alt="myself" />
 			</div>
 		</div>
 		
-		<div class="frame__side--section" id="fit">
+		<div class="frame__side--section adjust" >
 			<h1 class="frame__side--section-header">Contact</h1>
-			<div class="frame__side--section-content" >
+			<div class="frame__side--section-content adjust" >
 				<p class='contact'><i class="fas fa-phone contact__phone"></i>{{phone}}</p>
 				<p class='contact'><i class="fas fa-envelope contact__mail"></i>{{email}}</p>
 				<p class='contact'><i class="fas fa-map-pin contact__place"></i>{{address}}</p>
 			</div>
 		</div>
 
-		<div class="frame__side--section" id="fit">
+		<div class="frame__side--section fit">
 			<h1 class="frame__side--section-header">About me</h1>
-			<div class="frame__side--section-content">
+			<div class="frame__side--section-content fit">
 				<p>{{about}}</p>
 
 			</div>
 		</div>
 
-		<div class="frame__side--section" id="min-height fit">
+		<div class="frame__side--section adjust">
 			<h1 class="frame__side--section-header">Languages</h1>
 			<div class="frame__side--section-centerContent">
 				{{#lang}}
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 
-		<div class="frame__side--section" id="fit">
+		<div class="frame__side--section adjust">
 			<h1 class="frame__side--section-header">Interests</h1>
 			<div class="frame__side--section-interestsContent">
 				<ul>

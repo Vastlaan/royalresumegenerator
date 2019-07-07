@@ -46,8 +46,16 @@ app.post('/uploadPhoto',(req,res)=>{
 })
 app.post('/createPdf', (req,res)=>{
 
-	console.log(req.body)
+	
 	const data=req.body
+	console.log(data)
+	if(process.env.NODE_ENV==='production'){
+		data.root = 'https://royalcvmaker.herokuapp.com'
+	}else{
+		data.root = 'http://localhost:5000'
+	}
+
+	console.log(data)
 
 	const compile = async (templateName)=>{
 		const filePath =  path.join(process.cwd(),'templates',`${templateName}.html`)
