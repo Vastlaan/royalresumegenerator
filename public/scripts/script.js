@@ -49,9 +49,9 @@ const lang3Display = window.getComputedStyle(lang3).display
 const btn = document.querySelector("#lang__btn")
 
 if(lang2Display==="none"){
-	return lang2.style.display = "block"
+	return lang2.style.display = "flex"
 }else if(lang3Display==="none"){
-	lang3.style.display="block"
+	lang3.style.display="flex"
 	return btn.style.display="none"
 }
 }
@@ -91,6 +91,7 @@ if(lang3 !== "" && lang3 !== null&&lang3 !== undefined){
 return data
 }
 //get values from hobby inputs
+//==================================== IMPORTANT hobbies are in fact Skills =================================================
 const getHobbiesValues=()=>{
 const hobbies = document.querySelectorAll('.hobby')
 
@@ -174,6 +175,7 @@ const getSchoolsValues = () =>{
 
 }
 //get values from skills inputs
+//==================================== IMPORTANT skills are in fact Additional Courses =================================================
 const getSkillsValues=()=>{
 const skills = document.querySelectorAll('.skill')
 
@@ -238,3 +240,40 @@ fetch('/createPdf', {
         a.remove();  //afterwards we remove the element again  
 	})      
 }
+
+// responsible for menu navigation to appropriate section
+const scrollToSection = (event) =>{
+	const name = event.target.getAttribute('name')
+	return document.querySelector(`#${name}`).scrollIntoView({behavior:"smooth"})
+}
+
+const goHome = ()=>{
+	return document.querySelector(".header").scrollIntoView({behavior:"smooth"})
+}
+
+//Highlight section when scrolled to its view
+
+const highlight = () =>{
+	const sections = document.querySelectorAll('.section')
+	const navs = document.querySelectorAll('.nav__section--btn')
+	const fromTop = window.scrollY+50;
+
+	sections.forEach(section=>{
+		if(fromTop<100){
+			return navs.forEach(nav=>{nav.parentElement.classList.remove("active")})
+		}
+		if(section.offsetTop<fromTop && section.offsetTop+section.offsetHeight>=fromTop){
+			section.id
+			navs.forEach(nav=>{
+				const name = nav.getAttribute('name')
+				if(name===section.id){
+					return nav.parentElement.classList.add("active")
+				}else{
+					return nav.parentElement.classList.remove("active")
+				}
+			})
+		}
+
+	})
+}
+window.onscroll=highlight

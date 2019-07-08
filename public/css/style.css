@@ -29,27 +29,63 @@ body {
   width: 100%;
   background-color: #d3d3d3; }
 
+.active {
+  background-color: #590034 !important; }
+
 .nav {
   width: 100%;
   background-color: #003459;
   height: 5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 1rem; }
-  .nav__left {
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9; }
+  .nav__icon {
     color: white;
-    display: flex; }
-    .nav__left--icon {
+    padding: 1rem 1.2rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+    .nav__icon:hover {
+      background-color: #590034; }
+    .nav__icon--i {
       display: block;
-      font-size: 3rem;
+      font-size: 2.5rem;
       cursor: pointer; }
-  .nav__right {
-    color: white;
-    display: flex; }
-    .nav__right--icon {
+  .nav__section {
+    transition: all .2s;
+    padding: 0 2rem;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 62.5em) {
+      .nav__section {
+        padding: 0 1rem; } }
+    @media only screen and (max-width: 25em) {
+      .nav__section {
+        padding: 0 .5rem; } }
+    .nav__section--btn {
       display: block;
-      font-size: 3rem;
+      min-height: 100%;
+      text-decoration: none;
+      color: white;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1.8rem;
       cursor: pointer; }
+      @media only screen and (max-width: 62.5em) {
+        .nav__section--btn {
+          font-size: 1.4rem; } }
+      @media only screen and (max-width: 62.5em) {
+        .nav__section--btn {
+          font-size: 1.3rem; } }
+    .nav__section:hover {
+      background-color: #590034; }
 
 .header {
   width: 100%;
@@ -95,6 +131,7 @@ body {
       margin-top: 6rem; }
     .form__photo--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -161,6 +198,7 @@ body {
     margin-bottom: 5rem; }
     .form__contact--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -210,6 +248,7 @@ body {
     margin-bottom: 5rem; }
     .form__about--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -252,6 +291,7 @@ body {
     margin-bottom: 5rem; }
     .form__lang--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -260,44 +300,42 @@ body {
       text-transform: uppercase;
       text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
-    .form__lang label {
-      display: inline-block;
-      width: 35%;
-      font-family: "Iceberg", cursive;
-      font-size: 3.8rem;
-      text-align: right;
-      margin-right: 1rem;
-      width: auto;
-      text-align: center;
-      margin: 0 1rem; }
-      @media only screen and (max-width: 37.5em) {
-        .form__lang label {
-          font-size: 3rem; } }
     .form__lang--input {
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .form__lang--input label {
+        display: inline-block;
+        width: 35%;
+        font-family: "Iceberg", cursive;
+        font-size: 3.8rem;
+        text-align: right;
+        margin-right: 1rem;
+        width: auto;
+        text-align: center;
+        margin: 0 1rem; }
       .form__lang--input-1 {
         display: inline-block;
-        width: 20%;
+        width: 50%;
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
-        @media only screen and (max-width: 37.5em) {
-          .form__lang--input-1 {
-            width: 70%; } }
-        @media only screen and (max-width: 25em) {
-          .form__lang--input-1 {
-            width: 60%; } }
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+        margin: 1rem;
+        text-align: center; }
         .form__lang--input-1:focus {
           outline: none; }
+      .form__lang--input-range {
+        display: flex;
+        width: 100%;
+        justify-content: center; }
+        .form__lang--input-range span {
+          display: block;
+          transform: translateY(0.7rem); }
       .form__lang--input-2 {
         display: inline-block;
-        width: 20%; }
-        @media only screen and (max-width: 37.5em) {
-          .form__lang--input-2 {
-            width: 70%; } }
-        @media only screen and (max-width: 25em) {
-          .form__lang--input-2 {
-            width: 60%; } }
+        width: 50%;
+        margin: 1rem; }
         .form__lang--input-2:focus {
           outline: none; }
     .form__lang p {
@@ -325,13 +363,14 @@ body {
       font-size: 2.2rem;
       color: white;
       cursor: pointer; }
-  .form__interests {
+  .form__skills {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
     text-align: center; }
-    .form__interests--header {
+    .form__skills--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -340,7 +379,7 @@ body {
       text-transform: uppercase;
       text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
-    .form__interests span {
+    .form__skills span {
       display: inline-block;
       background-color: #590034;
       font-family: "Poiret One", cursive;
@@ -352,10 +391,10 @@ body {
       margin: 0 auto;
       border-radius: 3px;
       padding: 1rem; }
-    .form__interests--input {
+    .form__skills--input {
       margin: 2rem auto;
       width: 100%; }
-      .form__interests--input label {
+      .form__skills--input label {
         display: inline-block;
         width: 35%;
         font-family: "Iceberg", cursive;
@@ -364,7 +403,7 @@ body {
         margin-right: 1rem;
         width: auto;
         margin: auto; }
-      .form__interests--input input {
+      .form__skills--input input {
         height: 4rem;
         text-align: center;
         display: inline-block;
@@ -372,9 +411,9 @@ body {
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
-        .form__interests--input input:focus {
+        .form__skills--input input:focus {
           outline: none; }
-      .form__interests--input p {
+      .form__skills--input p {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
@@ -387,6 +426,7 @@ body {
     margin-bottom: 5rem; }
     .form__work--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -472,6 +512,7 @@ body {
     margin-bottom: 5rem; }
     .form__education--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -540,13 +581,14 @@ body {
         font-size: 1.6rem;
         color: #AF040F;
         text-align: center; }
-  .form__skills {
+  .form__courses {
     display: flex;
     flex-direction: column;
     margin-bottom: 5rem;
     text-align: center; }
-    .form__skills--header {
+    .form__courses--header {
       margin: 1rem;
+      margin-top: 5rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -555,7 +597,7 @@ body {
       text-transform: uppercase;
       text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 23, 31, 0.3); }
-    .form__skills span {
+    .form__courses span {
       display: inline-block;
       background-color: #590034;
       font-family: "Poiret One", cursive;
@@ -567,10 +609,10 @@ body {
       margin: 0 auto;
       border-radius: 3px;
       padding: 1rem; }
-    .form__skills--input {
+    .form__courses--input {
       margin: 2rem auto;
       width: 100%; }
-      .form__skills--input label {
+      .form__courses--input label {
         display: inline-block;
         width: 35%;
         font-family: "Iceberg", cursive;
@@ -578,16 +620,16 @@ body {
         text-align: right;
         margin-right: 1rem;
         text-align: center; }
-      .form__skills--input input {
+      .form__courses--input input {
         text-align: center;
         display: inline-block;
         width: 70%;
         padding: .5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
-        .form__skills--input input:focus {
+        .form__courses--input input:focus {
           outline: none; }
-      .form__skills--input p {
+      .form__courses--input p {
         display: block;
         width: 100%;
         font-family: "Courier New", sans-sefir;
@@ -596,20 +638,24 @@ body {
         text-align: center; }
   .form__submit {
     display: block;
-    width: 30rem;
+    width: 50rem;
     margin: 2.5rem auto;
-    padding: .5rem 2rem;
+    padding: 2rem 5rem;
     border: none;
     border-radius: 3px;
     background-color: #003459;
     font-family: "Poiret One", cursive;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: .3rem;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.3);
     transition: all .2s; }
+    @media only screen and (max-width: 37.5em) {
+      .form__submit {
+        padding: .5rem 2.5rem;
+        width: 35rem; } }
     .form__submit:hover {
       transform: translateY(-0.2rem);
       box-shadow: 0 1.3rem 1rem rgba(0, 0, 0, 0.2); }

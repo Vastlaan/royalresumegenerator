@@ -22,16 +22,16 @@
 		<div class="frame__side--section adjust" >
 			<h1 class="frame__side--section-header">Contact</h1>
 			<div class="frame__side--section-content adjust" >
-				<p class='contact'><i class="fas fa-phone contact__phone"></i>{{phone}}</p>
-				<p class='contact'><i class="fas fa-envelope contact__mail"></i>{{email}}</p>
-				<p class='contact'><i class="fas fa-map-pin contact__place"></i>{{address}}</p>
+				<p class='contact'><i class="fas fa-phone contact__phone"></i>{{{phone}}}</p>
+				<p class='contact'><i class="fas fa-envelope contact__mail"></i>{{{email}}}</p>
+				<p class='contact'><i class="fas fa-map-pin contact__place"></i>{{{address}}}</p>
 			</div>
 		</div>
 
 		<div class="frame__side--section fit">
 			<h1 class="frame__side--section-header">About me</h1>
 			<div class="frame__side--section-content fit">
-				<p>{{about}}</p>
+				<p>{{{about}}}</p>
 
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 				{{#lang}}
 					<div class='lang1'>
 						<div class='lang1__strip' style="width:{{level}}"></div>
-						<p class="lang1__text">{{language}}</p>
+						<p class="lang1__text">{{{language}}}</p>
 					</div>
 				{{/lang}}
 			</div>
@@ -53,7 +53,7 @@
 			<div class="frame__side--section-interestsContent">
 				<ul>
 					{{#hobbies}}
-					<li><i class="fas fa-check"></i>{{hobby}}</li>
+					<li><i class="fas fa-check"></i>{{{hobby}}}</li>
 					{{/hobbies}}
 				</ul>
 
@@ -62,18 +62,18 @@
 	</section>
 	<section class="frame__main">
 		<header class="frame__main--header">
-			<h1>{{name}}</h1>
+			<h1>{{{name}}}</h1>
 			<!-- <h2><i class='fas fa-globe'></i> www.michalantczak.com</h2> -->
 		</header>
 		<div class="frame__main--work">		
 				<span class='icon-wrapper-green'><i class="fas fa-handshake icon"></i></span>	
 				<h1 class="frame__main--work-header">Professional experience</h1>
 				{{#jobs}}
-				<div class="frame__main--work-date"><span>{{start}}</span> <span>{{stop}}</span></div>
+				<div class="frame__main--work-date"><span>{{{start}}}</span> <span>{{{stop}}}</span></div>
 				<p class="frame__main--work-description">
-					<span class="frame__main--work-description-who">{{position}}</span>
-					<span class="frame__main--work-description-where">{{company}}</span>
-					<span class="frame__main--work-description-what">{{description}}</span>
+					<span class="frame__main--work-description-who">{{{position}}}</span>
+					<span class="frame__main--work-description-where">{{{company}}}</span>
+					<span class="frame__main--work-description-what">{{{description}}}</span>
 				</p>
 				{{/jobs}}
 		</div>
@@ -81,11 +81,11 @@
 			<span class='icon-wrapper-blue'><i class="fas fa-graduation-cap icon"></i></span>
 			<h1 class="frame__main--education-header">Education</h1>
 			{{#schools}}
-			<div class="frame__main--education-date"><span>{{start}}</span> <span>{{stop}}</span></div>
+			<div class="frame__main--education-date"><span>{{{start}}}</span> <span>{{{stop}}}</span></div>
 			<p class="frame__main--education-description">
-				<span class="frame__main--education-description-who">{{profile}}</span>
-				<span class="frame__main--education-description-where">{{school}}</span>
-				<span class="frame__main--education-description-what">{{description}}</span>
+				<span class="frame__main--education-description-who">{{{profile}}}</span>
+				<span class="frame__main--education-description-where">{{{school}}}</span>
+				<span class="frame__main--education-description-what">{{{description}}}</span>
 			</p>
 			{{/schools}}
 			<!-- <div class="frame__main--education-date"><span>September 2000</span> <span>June 2004</span></div>
@@ -102,7 +102,7 @@
 		</div>
 		<ul class="frame__main--list">
 			{{#skills}}
-			<li><i class="far fa-check-circle"></i>{{skill}}</li>
+			<li><i class="far fa-check-circle"></i>{{{skill}}}</li>
 			{{/skills}}
 		</ul>
 	</section>

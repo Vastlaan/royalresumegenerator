@@ -1,5 +1,9 @@
 @mixin respond($breakpoint){
 
+	@if $breakpoint=='l'{
+		@media only screen and(max-width:62.5em){@content}
+	}
+
 	@if $breakpoint=='m'{
 		@media only screen and(max-width:50em){@content}
 	}

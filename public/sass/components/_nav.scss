@@ -3,25 +3,64 @@
 	background-color: $color-blue;
 	height:5rem;
 	display:flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	padding:1rem;
+	align-items: center;
 	
-	&__left{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 9;
+	
+	&__icon{
 		color:white;
+		padding:1rem 1.2rem 1rem 1rem;
 		display:flex;
-		&--icon{
+		justify-content: center;
+		align-items: center;
+		height:100%;
+		&:hover{
+			background-color:$color-purple;
+		}
+		&--i{
 			display: block;
-			font-size: 3rem;
+			font-size: 2.5rem;
 			cursor:pointer;	
 		}
 	}
-	&__right{
-		color:white;
+
+	&__section{
+		transition:all .2s;
+		padding:0 2rem;
+		min-height:100%;
 		display:flex;
-		&--icon{
-			display: block;
-			font-size: 3rem;
+		justify-content: center;
+		align-items: center;
+		@include respond(l){
+			padding:0 1rem;
+		}
+		@include respond(xs){
+			padding:0 .5rem;
+		}
+
+		&--btn{
+			display:block;
+			min-height:100%;
+			text-decoration: none;
+			color:white;
+			font-family: $font-rajdhani;
+			font-size: 1.8rem;
 			cursor:pointer;
+			@include respond(l){
+				font-size: 1.4rem;
+			}
+			@include respond(l){
+				font-size: 1.3rem;
+			}
+		}
+
+		&:hover{
+			background-color: $color-purple;
 		}
 	}
 }

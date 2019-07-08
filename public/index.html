@@ -10,15 +10,37 @@
 
 </head>
 <body>
+
 	<nav class='nav'>
-		<div class='nav__left'>
-			<i class="nav__left--icon fas fa-info-circle "></i>
+		<div class='nav__icon'>
+			<i onClick="goHome()" class="nav__icon--i fas fa-home"></i>
 		</div>
-		<div class='nav__right'>
-			<i class="nav__right--icon fas fa-info-circle "></i>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn">Photo</div>
 		</div>
-		
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn">Contact</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__about' class="nav__section--btn">About</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__languages' class="nav__section--btn">Languages</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__skills' class="nav__section--btn">Skills</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__work' class="nav__section--btn">Work</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__education' class="nav__section--btn">Education</div>
+		</div>
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__courses' class="nav__section--btn">Courses</div>
+		</div>
 	</nav>
+
 	<header class='header'>
 			<h1 class='header__title'>Create Your Own</h1>
 			<h1 class='header__title'>Outstanding Resume</h1>
@@ -26,7 +48,7 @@
 
 	<form class='form' onSubmit='submitForm(event)'>
 
-		<div class='form__photo'>
+		<div class='form__photo section' id="section__photo">
 			<h3 class='form__photo--header'>Section photo</h3>
 			<div class='form__photo--input'>
 				<label for='file'><i class="fas fa-upload"></i></label>
@@ -40,7 +62,7 @@
 			
 		</div>
 
-		<div class='form__contact'>
+		<div class='form__contact section' id="section__contact">
 			<h3 class='form__contact--header'>Section Contact</h3>
 			<div class='form__contact--input'>
 				<label>Name: </label>
@@ -65,7 +87,7 @@
 			</div>
 		</div>
 
-		<div class='form__about'>
+		<div class='form__about section' id="section__about">
 			<h3 class='form__about--header'>Section About me</h3>
 			<div class='form__about--input'>
 				<label>Describe yourself:</label>
@@ -74,59 +96,65 @@
 			</div>
 		</div>
 
-		<div class='form__lang'>
+		<div class='form__lang section' id="section__languages">
 			<h3 class='form__lang--header'>Section Languages</h3>
 			<p>Please choose at least 1 and at most 3 languages you speak and add level of proficiency.</p>
 			<div class='form__lang--input' id="lang1">
 				<label>Language:</label>
 				<input class='form__lang--input-1' id="lang1__lang" type="text" name="lang" maxlength="12" required>
 				<label>Level:</label>
-				<input class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
-				<span id="lang1__output"></span>
+				<div class='form__lang--input-range'>
+					<input class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+					<span id="lang1__output"></span>
+				</div>
 			</div>
 			<div class='form__lang--input' id="lang2">
 				<label>Language:</label>
 				<input class='form__lang--input-1' id="lang2__lang" type="text" name="lang" maxlength="12">
 				<label>Level:</label>
-				<input class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
-				<span id="lang2__output"></span>
+				<div class='form__lang--input-range'>
+					<input class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+					<span id="lang2__output"></span>
+				</div>
 			</div>
 			<div class='form__lang--input' id="lang3">
 				<label>Language:</label>
 				<input class='form__lang--input-1' id="lang3__lang" type="text" name="lang" maxlength="12">
 				<label>Level:</label>
-				<input class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
-				<span id="lang3__output"></span>
+				<div class='form__lang--input-range'>
+					<input class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
+					<span id="lang3__output"></span>
+				</div>
 			</div>
 			<div class='form__lang--btn' id="lang__btn" onClick="moreLanguageField()">More</div>
 		</div>
 
-		<div class='form__interests'>
-			<h3 class='form__interests--header'>Section Interests</h3>
-			<span>Please fill in at least 1 and at most 4 personal interests/hobbies.</span>
-			<div class='form__interests--input'>
-				<label>Hobby nr. 1:</label>
-				<input class='hobby' type="text" name='interests' maxlength='20' required />
+		<div class='form__skills section' id="section__skills">
+			<h3 class='form__skills--header'>Section Skills</h3>
+			<span>Please fill in at least 1 and at most 4 personal skills/hobbies.</span>
+			<div class='form__skills--input'>
+				<label>Skill nr.1:</label>
+				<input class='hobby' type="text" name='skills' maxlength='20' required />
 				<p>Maximum 20 characters.</p>
 			</div>
-			<div class='form__interests--input'>
-				<label>Hobby nr. 2:</label>
-				<input class='hobby' type="text" name='interests' maxlength='20' />
+			<div class='form__skills--input'>
+				<label>Skill nr.2:</label>
+				<input class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
-			<div class='form__interests--input'>
-				<label>Hobby nr. 3:</label>
-				<input class='hobby' type="text" name='interests' maxlength='20' />
+			<div class='form__skills--input'>
+				<label>Skill nr.3:</label>
+				<input class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
-			<div class='form__interests--input'>
-				<label>Hobby nr. 4:</label>
-				<input class='hobby' type="text" name='interests' maxlength='20' />
+			<div class='form__skills--input'>
+				<label>Skill nr.4:</label>
+				<input class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
 		</div>
 
-		<div class='form__work'>
+		<div class='form__work section' id="section__work">
 			<h3 class='form__work--header'>Section Professional Experience</h3>
 			<span>
 				Please fill in your last (or most important) two job positions. 
@@ -170,7 +198,7 @@
 			</div>
 		</div>
 
-		<div class='form__education'>
+		<div class='form__education section' id="section__education">
 			<h3 class='form__education--header'>Section Education</h3>
 			<span>Please fill in your last two graduated schools/universities.</span>
 			<div class='form__education--input'>
@@ -211,27 +239,27 @@
 			</div>
 		</div>
 
-		<div class='form__skills'>
-			<h3 class='form__skills--header'>Section Additional Skills</h3>
-			<span>Please fill in at least 1 and at most 4 additional (soft) skills. For example: problem-solving, Ability to teach and mentor, but also: drive license, excelent Adobe Photoshop skills etc.</span>
-			<div class='form__skills--input'>
-				<label>Skill nr. 1:</label>
-				<input class='skill' type="text" name='skills' maxlength='50' required />
+		<div class='form__courses section' id="section__courses">
+			<h3 class='form__courses--header'>Section Additional Courses</h3>
+			<span>Please fill in at least 1 and at most 4 additional courses or trainings. For example: Drive License, Forklift Operator, Special Dental Nurse Training etc.</span>
+			<div class='form__courses--input'>
+				<label>Course nr.1:</label>
+				<input class='skill' type="text" name='courses' maxlength='50' required />
 				<p>Maximum 50 characters.</p>
 			</div>
-			<div class='form__skills--input'>
-				<label>Skill nr. 2:</label>
-				<input class='skill' type="text" name='skills' maxlength='50' />
+			<div class='form__courses--input'>
+				<label>Course nr.2:</label>
+				<input class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
-			<div class='form__skills--input'>
-				<label>Skill nr. 3:</label>
-				<input class='skill' type="text" name='skills' maxlength='50' />
+			<div class='form__courses--input'>
+				<label>Course nr.3:</label>
+				<input class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
-			<div class='form__skills--input'>
-				<label>Skill nr. 4:</label>
-				<input class='skill' type="text" name='skills' maxlength='50' />
+			<div class='form__courses--input'>
+				<label>Course nr.4:</label>
+				<input class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
 		</div>
