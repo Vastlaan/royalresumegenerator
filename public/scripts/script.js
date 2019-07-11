@@ -283,11 +283,10 @@ window.onscroll=highlight
 const validateInput = (event) =>{
 	const notAllowedCodes = [35,47,60,62,92]
 	let kCd = event.keyCode || event.which
-
 	//fix for chrome on android
 	console.log(kCd)
 	if(kCd===0 || kCd===229){
-		kCd= getKeyCode(this.value)
+		kCd= getKeyCode(event.target.value)
 	}
 	console.log(kCd)	//remove it
 	// end of fix
