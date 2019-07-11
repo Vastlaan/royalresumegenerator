@@ -28,7 +28,6 @@ app.get('/templates/style.css', (req,res)=>{
 app.get('/tmp/my-uploads/me.jpg', (req,res)=>{
 	res.sendFile(path.join(__dirname,'tmp/my-uploads','me.jpg'))
 })
-app.use('/img', express.static(__dirname+'/public/img'))
 
 app.post('/uploadPhoto',(req,res)=>{
 	upload(req, res, function (err) {
