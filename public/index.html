@@ -10,7 +10,7 @@
 
 </head>
 <body>
-	<img src="/img/a.jpg" style="display:none" alt="hidden image">
+	
 	<nav class='mainNav'>
 		<div class='mainNav__left'>
 			<i onClick="goHome()" class="fas fa-home mainNav__left--i"></i>
@@ -124,7 +124,7 @@
 				<p lang="en">Please fill in city and/or country you live in.</p>
 				<p lang="pl">Proszę podać miasto i/lub kraj zamieszkania.</p>
 				<p lang="en">Example: "Houston, United States". Maximum 25 characters.</p>
-				<p lang="en">Na przykład: "Gdynia, Polska". Maximum 25 characters.</p>
+				<p lang="pl">Na przykład: "Gdynia, Polska". Maximum 25 characters.</p>
 			</div>
 		</div>
 
@@ -183,27 +183,37 @@
 		</div>
 
 		<div class='form__skills section' id="section__skills">
-			<h3 class='form__skills--header'>Section Skills</h3>
-			<span>Please fill in at least 1 and at most 4 personal skills/hobbies.</span>
+			<h3 lang="en" class='form__skills--header'>Section Skills</h3>
+			<h3 lang="pl" class='form__skills--header'>Sekcja Umiejętności</h3>
+			<span lang="en">Please fill in at least 1 and at most 4 personal skills.</span>
+			<span lang="pl">Proszę wypełnić conajmniej 1 a najwyżej 4 umiejętności personalne.</span>
 			<div class='form__skills--input'>
-				<label>Skill nr.1:</label>
+				<label lang="en">Skill nr. 1:</label>
+				<label lang="pl">Umiejętność nr. 1:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' required />
-				<p>Maximum 20 characters.</p>
+				<p lang="en">Maximum 20 characters.</p>
+				<p lang="pl">Maximum 20 znaków.</p>
 			</div>
 			<div class='form__skills--input'>
-				<label>Skill nr.2:</label>
+				<label lang="en">Skill nr. 2:</label>
+				<label lang="pl">Umiejętność nr. 2:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
-				<p>Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 			<div class='form__skills--input'>
-				<label>Skill nr.3:</label>
+				<label lang="en">Skill nr. 3:</label>
+				<label lang="pl">Umiejętność nr. 3:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
-				<p>Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 			<div class='form__skills--input'>
-				<label>Skill nr.4:</label>
+				<label lang="en">Skill nr. 4:</label>
+				<label lang="pl">Umiejętność nr. 4:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
-				<p>Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
+				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 		</div>
 
@@ -322,6 +332,7 @@
 	</form>
 	<footer>
 		<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> messages.attribution.is_licensed_by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+		<img src="/img/a.jpg" style="width:10rem" alt="hidden image">
 	</footer>
 
 	<div class="validationWarning" style="display:none">
