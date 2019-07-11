@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,8 @@
 		<div class='mainNav__left'>
 			<i onClick="goHome()" class="fas fa-home mainNav__left--i"></i>
 			<div class='mainNav__left--section'>
-				<p>Sections:</p>
+				<p lang="en">Sections:</p>
+				<p lang="pl">Sekcje:</p>
 			</div>
 		</div>
 		<div class="mainNav__language">
@@ -35,44 +35,55 @@
 		
 		<div class="nav__section">
 			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" lang="en">Photo</div>
-			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" lang="pl">Fotografia</div>
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" lang="pl">Foto</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn">Contact</div>
+			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn" lang="en">Contact</div>
+			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn" lang="pl">Kontakt</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__about' class="nav__section--btn">About</div>
+			<div onClick="scrollToSection(event)" name='section__about' class="nav__section--btn" lang="en">About</div>
+			<div onClick="scrollToSection(event)" name='section__about' class="nav__section--btn" lang="pl">O mnie</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__languages' class="nav__section--btn">Languages</div>
+			<div onClick="scrollToSection(event)" name='section__languages' class="nav__section--btn" lang="en">Languages</div>
+			<div onClick="scrollToSection(event)" name='section__languages' class="nav__section--btn" lang="pl">Języki</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__skills' class="nav__section--btn">Skills</div>
+			<div onClick="scrollToSection(event)" name='section__skills' class="nav__section--btn" lang="en">Skills</div>
+			<div onClick="scrollToSection(event)" name='section__skills' class="nav__section--btn" lang="pl">Umiejętności</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__work' class="nav__section--btn">Work</div>
+			<div onClick="scrollToSection(event)" name='section__work' class="nav__section--btn" lang="en">Work</div>
+			<div onClick="scrollToSection(event)" name='section__work' class="nav__section--btn" lang="pl">Praca</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__education' class="nav__section--btn">Education</div>
+			<div onClick="scrollToSection(event)" name='section__education' class="nav__section--btn" lang="en">Education</div>
+			<div onClick="scrollToSection(event)" name='section__education' class="nav__section--btn" lang="pl">Edukacja</div>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__courses' class="nav__section--btn">Courses</div>
+			<div onClick="scrollToSection(event)" name='section__courses' class="nav__section--btn" lang="en">Courses</div>
+			<div onClick="scrollToSection(event)" name='section__courses' class="nav__section--btn" lang="pl">Kursy</div>
 		</div>
 	</nav>
 
 	<header class='header'>
-			<h1 class='header__title'>Create Your Own</h1>
-			<h1 class='header__title'>Outstanding Resume</h1>
+			<h1 class='header__title' lang="en">Create Your Own</h1>
+			<h1 class='header__title' lang="pl">Wygeneruj Własne</h1>
+			<h1 class='header__title' lang="en">Outstanding Resume</h1>
+			<h1 class='header__title' lang="pl">Rewelacyjne CV</h1>
 	</header>
 
 	<form class='form' onSubmit='submitForm(event)'>
 
 		<div class='form__photo section' id="section__photo">
-			<h3 class='form__photo--header'>Section photo</h3>
+			<h3 class='form__photo--header' lang="en">Section photo</h3>
+			<h3 class='form__photo--header' lang="pl">Sekcja Foto</h3>
 			<div class='form__photo--input'>
 				<label for='file'><i class="fas fa-upload"></i></label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>
-				<p>Choose a file to upload. Allowed formats JPG, JPEG, PNG.</p>
+				<p lang="en">Choose a file to upload. Allowed formats: JPG, JPEG, PNG.</p>
+				<p lang="pl">Wybierz plik. Dozwolone formaty: JPG, JPEG, PNG.</p>
 			</div>
 			<p id='photo--info'></p>
 			<div class='form__photo--outputBox'>
@@ -82,27 +93,37 @@
 		</div>
 
 		<div class='form__contact section' id="section__contact">
-			<h3 class='form__contact--header'>Section Contact</h3>
+			<h3 class='form__contact--header' lang="en">Section Contact</h3>
+			<h3 class='form__contact--header' lang="pl">Sekcja Kontakt</h3>
 			<div class='form__contact--input'>
-				<label>Name: </label>
+				<label lang="en">Name: </label>
+				<label lang="pl">Imię: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='name' maxlength='19' required/>
-				<p>Please enter your full name. Maximum 19 characters.</p>
+				<p lang="en">Please enter your name. Maximum 19 characters.</p>
+				<p lang="pl">Proszę podać imię i nazwisko. Maximum 19 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
-				<label>Email: </label>
+				<label lang="en">Email: </label>
+				<label lang="pl">Email: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="email" name='email' maxlength='25' required/>
-				<p>Please enter your email address. Maximum 25 characters.</p>
+				<p lang="en">Please enter your email address. Maximum 25 characters.</p>
+				<p lang="pl">Proszę podać adres email. Maximum 25 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
-				<label>Phone: </label>
+				<label lang="en">Phone: </label>
+				<label lang="pl">Telefon: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="tel" name='phone' maxlength='20' required/>
-				<p>Please enter your phone number. Maximum 20 characters.</p>
+				<p lang="en">Please enter your phone number. Maximum 20 characters.</p>
+				<p lang="pl">Proszę podać numer telefonu. Maximum 20 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
-				<label>Address: </label>
+				<label lang="en">Address: </label>
+				<label lang="pl">Adres: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='address' maxlength='25' required/>
-				<p>Please fill in city and/or country you live in.</p>
-				<p>Example: "Houston, United States" Maximum 25 characters.</p>
+				<p lang="en">Please fill in city and/or country you live in.</p>
+				<p lang="pl">Proszę podać miasto i/lub kraj zamieszkania.</p>
+				<p lang="en">Example: "Houston, United States". Maximum 25 characters.</p>
+				<p lang="en">Na przykład: "Gdynia, Polska". Maximum 25 characters.</p>
 			</div>
 		</div>
 
