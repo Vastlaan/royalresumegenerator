@@ -320,7 +320,7 @@ const switchLanguage = (lang) =>{
 
 	elements.forEach(element=>{
 		if(element.getAttribute('lang')===lang){
-			element.style.display = "initial"
+			element.style.display = ""
 		}else{
 			element.style.display= "none"
 		}

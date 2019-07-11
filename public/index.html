@@ -10,6 +10,7 @@
 
 </head>
 <body>
+	<img src="/img/a.jpg" style="display:none" alt="hidden image">
 	<nav class='mainNav'>
 		<div class='mainNav__left'>
 			<i onClick="goHome()" class="fas fa-home mainNav__left--i"></i>
@@ -128,45 +129,57 @@
 		</div>
 
 		<div class='form__about section' id="section__about">
-			<h3 class='form__about--header'>Section About me</h3>
+			<h3 class='form__about--header' lang="en">Section About me</h3>
+			<h3 class='form__about--header' lang="pl">Sekcja O Mnie</h3>
 			<div class='form__about--input'>
-				<label>Describe yourself:</label>
+				<label lang="en">Describe yourself:</label>
+				<label lang="pl">Opisz własną osobę:</label>
 				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='about' minlength='250' maxlength='420' required></textarea>
-				<p>Please describe your person. From 250 to 420 characters.</p>
+				<p lang="en">Please describe your person. From 250 to 420 characters.</p>
+				<p lang="pl">Proszę opisz własną osobę. Od 250 do 420 znaków.</p>
 			</div>
 		</div>
 
 		<div class='form__lang section' id="section__languages">
-			<h3 class='form__lang--header'>Section Languages</h3>
-			<p>Please choose at least 1 and at most 3 languages you speak and add level of proficiency.</p>
+			<h3 class='form__lang--header' lang="en">Section Languages</h3>
+			<h3 class='form__lang--header' lang="pl">Sekcja Języki</h3>
+			<p lang="en">Please choose at least 1 and at most 3 languages you speak and add level of proficiency.</p>
+			<p lang="pl">Proszę wybrać conajmniej 1 i masymalnie 3 języki, którymi się posługujesz oraz stopień ich zaawansowania.</p>
 			<div class='form__lang--input' id="lang1">
-				<label>Language:</label>
+				<label lang="en">Language:</label>
+				<label lang="pl">Język:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-1' id="lang1__lang" type="text" name="lang" maxlength="12" required>
-				<label>Level:</label>
+				<label lang="en">Level:</label>
+				<label lang="pl">Poziom:</label>
 				<div class='form__lang--input-range'>
 					<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
 					<span id="lang1__output"></span>
 				</div>
 			</div>
 			<div class='form__lang--input' id="lang2">
-				<label>Language:</label>
+				<label lang="en">Language:</label>
+				<label lang="pl">Język:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-1' id="lang2__lang" type="text" name="lang" maxlength="12">
-				<label>Level:</label>
+				<label lang="en">Level:</label>
+				<label lang="pl">Poziom:</label>
 				<div class='form__lang--input-range'>
 					<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
 					<span id="lang2__output"></span>
 				</div>
 			</div>
 			<div class='form__lang--input' id="lang3">
-				<label>Language:</label>
+				<label lang="en">Language:</label>
+				<label lang="pl">Język:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-1' id="lang3__lang" type="text" name="lang" maxlength="12">
-				<label>Level:</label>
+				<label lang="en">Level:</label>
+				<label lang="pl">Poziom:</label>
 				<div class='form__lang--input-range'>
 					<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
 					<span id="lang3__output"></span>
 				</div>
 			</div>
-			<div class='form__lang--btn' id="lang__btn" onClick="moreLanguageField()">More</div>
+			<div lang="en" class='form__lang--btn' id="lang__btn" onClick="moreLanguageField()">More</div>
+			<div lang="pl" class='form__lang--btn' id="lang__btn" onClick="moreLanguageField()">Więcej</div>
 		</div>
 
 		<div class='form__skills section' id="section__skills">
