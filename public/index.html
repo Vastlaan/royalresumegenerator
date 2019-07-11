@@ -218,46 +218,73 @@
 		</div>
 
 		<div class='form__work section' id="section__work">
-			<h3 class='form__work--header'>Section Professional Experience</h3>
-			<span>
+			<h3 lang="en" class='form__work--header'>Section Professional Experience</h3>
+			<h3 lang="pl" class='form__work--header'>Sekcja Doświadczenie Zawodowe</h3>
+			<span lang="en">
 				Please fill in your last (or most important) two job positions. 
 				If you don't have a lot of work experience, you had only one job or didn't have any, please consider including any other job-like activities, for example volunteering, important school projects etc.
 			</span>
+			<span lang="pl">
+				Proszę uzupełnij swoje dwie ostatnie (lub najważniejsze) stanowiska pracy.
+				Jeżeli nie masz dużego dośwaidczenia zawodowego, albo zajmowałeś do tej pory tylko jedno stanowisko pracy, rozważ uzupełnienie swojego doświadczenia o pokrewne aktywności, takie jak: wolontariat, czy ważne szkolne projekty.
+			</span>
 			<div class='form__work--input'>
-				<h1>Job nr. 1</h1>
-				<label>Position: </label>
+				<h1 lang="en">Job nr. 1</h1>
+				<h1 lang="pl">Praca nr. 1</h1>
+				<label lang="en">Position: </label>
+				<label lang="pl">Stanowisko: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-1' maxlength='25' required/>
-				<p>Please enter your job function. Maximum 25 characters.</p>
-				<label>Company: </label>
+				<p lang="en">Please enter your job function. Maximum 25 characters.</p>
+				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 25 znaków.</p>
+				<label lang="en">Company: </label>
+				<label lang="pl">Firma: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-1' maxlength='35' required/>
-				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
-				<label>Describe your job: </label>
+				<p lang="en">Name and localization of company you were working for. Maximum 35 characters.</p>
+				<p lang="pl">Nazwa firmy i jej lokalizacja. Maximum 35 znaków.</p>
+				<label lang="en">Describe your job: </label>
+				<label lang="pl">Opisz swoją pracę: </label>
 				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
-				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
-				<label>When did you START working: </label>
+				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
+				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maximum 200 znaków.</p>
+				<label lang="en">When did you START working: </label>
+				<label lang="pl">Kiedy rozpocząłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='start-1' maxlength='14' required/>
-				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
-				<label>When did you STOP working: </label>
+				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maximum 14 znaków.</p>
+				<label lang="en">When did you STOP working: </label>
+				<label lang="pl">Kiedy zakończyłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='stop-1' maxlength='14' required/>
-				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
+				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maximum 14 znaków.</p>
 			</div>
 			<div class='form__work--input'>
-				<h1>Job nr. 2</h1>
-				<label>Position: </label>
+				<h1 lang="en">Job nr. 2</h1>
+				<h1 lang="pl">Praca nr. 2</h1>
+				<label lang="en">Position: </label>
+				<label lang="pl">Stanowisko: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-2' maxlength='25' required/>
-				<p>Please enter your job function. Maximum 25 characters.</p>
-				<label>Company: </label>
+				<p lang="en">Please enter your job function. Maximum 25 characters.</p>		
+				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 25 znaków.</p>
+				<label lang="en">Company: </label>
+				<label lang="pl">Firma: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-2' maxlength='35' required/>
-				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
-				<label>Describe your job: </label>
+				<p lang="en">Name and localization of company you were working for. Maximum 35 characters.</p>
+				<p lang="pl">Nazwa firmy i jej lokalizacja. Maximum 35 znaków.</p>
+				<label lang="en">Describe your job: </label>
+				<label lang="pl">Opisz swoją pracę: </label>
 				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
-				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
-				<label>When did you START working: </label>
+				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
+				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maximum 200 znaków.</p>
+				<label lang="en">When did you START working: </label>
+				<label lang="pl">Kiedy rozpocząłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='start-2' maxlength='14' required/>
-				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
-				<label>When did you STOP working: </label>
+				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maximum 14 znaków.</p>
+				<label lang="en">When did you STOP working: </label>
+				<label lang="pl">Kiedy zakończyłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='stop-2' maxlength='14' required/>
-				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maximum 14 znaków.</p>
 			</div>
 		</div>
 
