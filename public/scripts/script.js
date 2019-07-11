@@ -282,11 +282,22 @@ window.onscroll=highlight
 
 const validateInput = (event) =>{
 	const notAllowedCodes = [35,47,60,62,92]
-	if(notAllowedCodes.includes(event.keyCode)){
+	let kCd = event.keyCode || event.which
+
+	//fix for chrome on android
+	if(kCd===0 || kCd===229){
+		kCd= getKeyCode(this.value)
+	}
+	// end of fix
+	if(notAllowedCodes.includes(kCd)){
 		event.preventDefault()
 		displayValidationWarning()
 		return false
 	}
+}
+// helper function for key code validation on Chrome mobile
+const getKeyCode = (str) =>{
+	return str.charCodeAt(str.length -1)
 }
 
 //Display or close Validation Warning
@@ -305,14 +316,15 @@ const displayValidationWarning = () =>{
 //switch language
 
 const switchLanguage = (lang) =>{
-	const elements = document.querySelectorAll('[language]')
+	const elements = document.querySelectorAll('[lang]')
+	document.querySelector('html').setAttribute('lang',lang)
 
 	elements.forEach(element=>{
-		if(element.getAttribute('language')===lang){
+		if(element.getAttribute('lang')===lang){
 			element.style.display = "initial"
 		}else{
 			element.style.display= "none"
 		}
 	})
 }
-switchLanguage("EN")
+switchLanguage("en")

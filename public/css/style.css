@@ -32,6 +32,58 @@ body {
 .active {
   background-color: #590034 !important; }
 
+.mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #10A2BD; }
+  .mainNav__left {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+    .mainNav__left--i {
+      padding: 1rem;
+      display: block;
+      font-size: 2rem;
+      cursor: pointer; }
+    .mainNav__left--section {
+      min-height: 100%;
+      background-color: #003459;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem; }
+      .mainNav__left--section p {
+        display: block;
+        color: white;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.8rem; }
+        .mainNav__left--section p include respond(l) {
+          font-size: 1.7rem; }
+        @media only screen and (max-width: 37.5em) {
+          .mainNav__left--section p {
+            font-size: 1.6rem; } }
+  .mainNav__language {
+    padding: 0 1rem;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: end; }
+    .mainNav__language--icon svg {
+      width: 4rem;
+      height: 2.3rem;
+      cursor: pointer;
+      transition: transform .2s; }
+      .mainNav__language--icon svg:hover {
+        transform: scale(1.1); }
+
 .nav {
   width: 100%;
   background-color: #003459;
@@ -41,22 +93,9 @@ body {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
   z-index: 9; }
-  .nav__icon {
-    color: white;
-    padding: 1rem 1.2rem 1rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; }
-    .nav__icon:hover {
-      background-color: #590034; }
-    .nav__icon--i {
-      display: block;
-      font-size: 2.5rem;
-      cursor: pointer; }
   .nav__section {
     transition: all .2s;
     padding: 0 2rem;
@@ -70,6 +109,8 @@ body {
     @media only screen and (max-width: 25em) {
       .nav__section {
         padding: 0 .5rem; } }
+    .nav__section:hover {
+      background-color: #590034; }
     .nav__section--btn {
       display: block;
       min-height: 100%;
@@ -80,16 +121,14 @@ body {
       cursor: pointer; }
       @media only screen and (max-width: 62.5em) {
         .nav__section--btn {
-          font-size: 1.4rem; } }
-      @media only screen and (max-width: 62.5em) {
+          font-size: 1.7rem; } }
+      @media only screen and (max-width: 37.5em) {
         .nav__section--btn {
-          font-size: 1.3rem; } }
-    .nav__section:hover {
-      background-color: #590034; }
+          font-size: 1.6rem; } }
 
 .header {
   width: 100%;
-  height: 50vh;
+  height: 80vh;
   background-color: #00171F;
   display: flex;
   flex-direction: column;
@@ -131,7 +170,7 @@ body {
       margin-top: 6rem; }
     .form__photo--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -198,7 +237,7 @@ body {
     margin-bottom: 5rem; }
     .form__contact--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -248,7 +287,7 @@ body {
     margin-bottom: 5rem; }
     .form__about--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -291,7 +330,7 @@ body {
     margin-bottom: 5rem; }
     .form__lang--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -370,7 +409,7 @@ body {
     text-align: center; }
     .form__skills--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -426,7 +465,7 @@ body {
     margin-bottom: 5rem; }
     .form__work--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -512,7 +551,7 @@ body {
     margin-bottom: 5rem; }
     .form__education--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;
@@ -588,7 +627,7 @@ body {
     text-align: center; }
     .form__courses--header {
       margin: 1rem;
-      margin-top: 5rem;
+      margin-top: 9rem;
       font-family: "Rajdhani", sans-serif;
       font-size: 5rem;
       text-align: center;

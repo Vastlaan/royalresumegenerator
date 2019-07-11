@@ -1,3 +1,70 @@
+.mainNav{
+	position:fixed;
+	top:0;
+	left:0;
+	height:4rem;
+	width:100%;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $color-blue-light;
+
+	&__left{
+		color:white;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		height:100%;
+		&--i{
+			padding:1rem;
+			display: block;
+			font-size: 2rem;
+			cursor:pointer;	
+		}
+		&--section{
+			min-height:100%;
+			background-color: $color-blue;
+			display:flex;
+			align-items: center;
+			padding:0 2rem;
+
+			p{
+				display:block;
+				color:white;
+				font-family: $font-rajdhani;
+				font-size: 1.8rem;
+				include respond(l){
+					font-size: 1.7rem;
+				}
+				@include respond(s){
+					font-size: 1.6rem;
+				}
+				
+			}
+		}
+	}
+	&__language{
+		padding:0 1rem;
+		min-height:100%;
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		justify-self: end;
+
+		&--icon{
+			svg{
+				width:4rem;
+				height:2.3rem;
+				cursor:pointer;
+				transition:transform .2s;
+				&:hover{
+					transform:scale(1.1);
+				}
+			}
+		}
+	}
+}
+
 .nav{
 	width:100%;
 	background-color: $color-blue;
@@ -8,26 +75,9 @@
 	align-items: center;
 	
 	position:fixed;
-	top:0;
+	top:4rem;
 	left:0;
 	z-index: 9;
-	
-	&__icon{
-		color:white;
-		padding:1rem 1.2rem 1rem 1rem;
-		display:flex;
-		justify-content: center;
-		align-items: center;
-		height:100%;
-		&:hover{
-			background-color:$color-purple;
-		}
-		&--i{
-			display: block;
-			font-size: 2.5rem;
-			cursor:pointer;	
-		}
-	}
 
 	&__section{
 		transition:all .2s;
@@ -42,6 +92,9 @@
 		@include respond(xs){
 			padding:0 .5rem;
 		}
+		&:hover{
+			background-color: $color-purple;
+		}
 
 		&--btn{
 			display:block;
@@ -52,15 +105,11 @@
 			font-size: 1.8rem;
 			cursor:pointer;
 			@include respond(l){
-				font-size: 1.4rem;
+				font-size: 1.7rem;
 			}
-			@include respond(l){
-				font-size: 1.3rem;
+			@include respond(s){
+				font-size: 1.6rem;
 			}
-		}
-
-		&:hover{
-			background-color: $color-purple;
 		}
 	}
 }

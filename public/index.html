@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,31 @@
 
 </head>
 <body>
-
+	<nav class='mainNav'>
+		<div class='mainNav__left'>
+			<i onClick="goHome()" class="fas fa-home mainNav__left--i"></i>
+			<div class='mainNav__left--section'>
+				<p>Sections:</p>
+			</div>
+		</div>
+		<div class="mainNav__language">
+			<div onClick="switchLanguage('en')" name='language__photo' class="mainNav__language--icon" >
+				<svg>
+					<use xlink:href="img/collection-SVG-sprite.svg#uk"></use>
+				</svg>
+			</div>
+			<div onClick="switchLanguage('pl')" name='language__photo' class="mainNav__language--icon">
+				<svg>
+					<use xlink:href="img/collection-SVG-sprite.svg#poland"></use>
+				</svg>
+			</div>
+		</div>
+	</nav>
 	<nav class='nav'>
-		<div class='nav__icon'>
-			<i onClick="goHome()" class="nav__icon--i fas fa-home"></i>
-		</div>
+		
 		<div class="nav__section">
-			<div onClick="switchLanguage('EN')" name='section__photo' class="nav__section--btn" >EN </div>
-			<div onClick="switchLanguage('PL')" name='section__photo' class="nav__section--btn"> PL</div>
-		</div>
-
-		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" language="EN">Photo</div>
-			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" language="PL">Fotografia</div>
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" lang="en">Photo</div>
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" lang="pl">Fotografia</div>
 		</div>
 		<div class="nav__section">
 			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn">Contact</div>
@@ -97,7 +110,7 @@
 			<h3 class='form__about--header'>Section About me</h3>
 			<div class='form__about--input'>
 				<label>Describe yourself:</label>
-				<textarea type="text" name='about' minlength='250' maxlength='420' required></textarea>
+				<textarea onkeypress="validateInput(event)" type="text" name='about' minlength='250' maxlength='420' required></textarea>
 				<p>Please describe your person. From 250 to 420 characters.</p>
 			</div>
 		</div>
@@ -175,7 +188,7 @@
 				<input onkeypress="validateInput(event)" type="text" name='work' id='company-1' maxlength='35' required/>
 				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
 				<label>Describe your job: </label>
-				<textarea type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
+				<textarea onkeypress="validateInput(event)" type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
 				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
 				<label>When did you START working: </label>
 				<input onkeypress="validateInput(event)" type="text" name='work' id='start-1' maxlength='14' required/>
@@ -193,7 +206,7 @@
 				<input onkeypress="validateInput(event)" type="text" name='work' id='company-2' maxlength='35' required/>
 				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
 				<label>Describe your job: </label>
-				<textarea type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
+				<textarea onkeypress="validateInput(event)" type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
 				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
 				<label>When did you START working: </label>
 				<input onkeypress="validateInput(event)" type="text" name='work' id='start-2' maxlength='14' required/>
@@ -273,6 +286,9 @@
 		<button name='submit' class="form__submit" href=''>Create Resume.pdf</button>
 
 	</form>
+	<footer>
+		<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> messages.attribution.is_licensed_by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+	</footer>
 
 	<div class="validationWarning" style="display:none">
 		<i class="far fa-times-circle" onClick="displayValidationWarning()" style="font-size:3rem"></i>
