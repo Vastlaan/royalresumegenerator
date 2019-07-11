@@ -277,3 +277,42 @@ const highlight = () =>{
 	})
 }
 window.onscroll=highlight
+
+//Input validation
+
+const validateInput = (event) =>{
+	const notAllowedCodes = [35,47,60,62,92]
+	if(notAllowedCodes.includes(event.keyCode)){
+		event.preventDefault()
+		displayValidationWarning()
+		return false
+	}
+}
+
+//Display or close Validation Warning
+
+const displayValidationWarning = () =>{
+	const warning = document.querySelector('.validationWarning')
+	const style = window.getComputedStyle(warning)
+
+	if(style.display==="block"){
+		return warning.style.display = "none"
+	}else{
+		return warning.style.display = "block"
+	}
+}
+
+//switch language
+
+const switchLanguage = (lang) =>{
+	const elements = document.querySelectorAll('[language]')
+
+	elements.forEach(element=>{
+		if(element.getAttribute('language')===lang){
+			element.style.display = "initial"
+		}else{
+			element.style.display= "none"
+		}
+	})
+}
+switchLanguage("EN")

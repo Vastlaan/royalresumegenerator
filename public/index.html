@@ -16,7 +16,13 @@
 			<i onClick="goHome()" class="nav__icon--i fas fa-home"></i>
 		</div>
 		<div class="nav__section">
-			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn">Photo</div>
+			<div onClick="switchLanguage('EN')" name='section__photo' class="nav__section--btn" >EN </div>
+			<div onClick="switchLanguage('PL')" name='section__photo' class="nav__section--btn"> PL</div>
+		</div>
+
+		<div class="nav__section">
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" language="EN">Photo</div>
+			<div onClick="scrollToSection(event)" name='section__photo' class="nav__section--btn" language="PL">Fotografia</div>
 		</div>
 		<div class="nav__section">
 			<div onClick="scrollToSection(event)" name='section__contact' class="nav__section--btn">Contact</div>
@@ -52,7 +58,7 @@
 			<h3 class='form__photo--header'>Section photo</h3>
 			<div class='form__photo--input'>
 				<label for='file'><i class="fas fa-upload"></i></label>
-				<input type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>
+				<input onkeypress="validateInput(event)" type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>
 				<p>Choose a file to upload. Allowed formats JPG, JPEG, PNG.</p>
 			</div>
 			<p id='photo--info'></p>
@@ -66,22 +72,22 @@
 			<h3 class='form__contact--header'>Section Contact</h3>
 			<div class='form__contact--input'>
 				<label>Name: </label>
-				<input type="text" name='name' maxlength='19' required/>
+				<input onkeypress="validateInput(event)" type="text" name='name' maxlength='19' required/>
 				<p>Please enter your full name. Maximum 19 characters.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label>Email: </label>
-				<input type="email" name='email' maxlength='25' required/>
+				<input onkeypress="validateInput(event)" type="email" name='email' maxlength='25' required/>
 				<p>Please enter your email address. Maximum 25 characters.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label>Phone: </label>
-				<input type="tel" name='phone' maxlength='20' required/>
+				<input onkeypress="validateInput(event)" type="tel" name='phone' maxlength='20' required/>
 				<p>Please enter your phone number. Maximum 20 characters.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label>Address: </label>
-				<input type="text" name='address' maxlength='25' required/>
+				<input onkeypress="validateInput(event)" type="text" name='address' maxlength='25' required/>
 				<p>Please fill in city and/or country you live in.</p>
 				<p>Example: "Houston, United States" Maximum 25 characters.</p>
 			</div>
@@ -101,28 +107,28 @@
 			<p>Please choose at least 1 and at most 3 languages you speak and add level of proficiency.</p>
 			<div class='form__lang--input' id="lang1">
 				<label>Language:</label>
-				<input class='form__lang--input-1' id="lang1__lang" type="text" name="lang" maxlength="12" required>
+				<input onkeypress="validateInput(event)" class='form__lang--input-1' id="lang1__lang" type="text" name="lang" maxlength="12" required>
 				<label>Level:</label>
 				<div class='form__lang--input-range'>
-					<input class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+					<input onkeypress="validateInput(event)" class='form__lang--input-2' id="lang1__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
 					<span id="lang1__output"></span>
 				</div>
 			</div>
 			<div class='form__lang--input' id="lang2">
 				<label>Language:</label>
-				<input class='form__lang--input-1' id="lang2__lang" type="text" name="lang" maxlength="12">
+				<input onkeypress="validateInput(event)" class='form__lang--input-1' id="lang2__lang" type="text" name="lang" maxlength="12">
 				<label>Level:</label>
 				<div class='form__lang--input-range'>
-					<input class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
+					<input onkeypress="validateInput(event)" class='form__lang--input-2' id="lang2__range" type="range" name="points" min="0" max="10" onChange='displayRange()'>
 					<span id="lang2__output"></span>
 				</div>
 			</div>
 			<div class='form__lang--input' id="lang3">
 				<label>Language:</label>
-				<input class='form__lang--input-1' id="lang3__lang" type="text" name="lang" maxlength="12">
+				<input onkeypress="validateInput(event)" class='form__lang--input-1' id="lang3__lang" type="text" name="lang" maxlength="12">
 				<label>Level:</label>
 				<div class='form__lang--input-range'>
-					<input class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
+					<input onkeypress="validateInput(event)" class='form__lang--input-2' id="lang3__range" type="range" name="points" min="0" max="10" onChange='displayRange()' >
 					<span id="lang3__output"></span>
 				</div>
 			</div>
@@ -134,22 +140,22 @@
 			<span>Please fill in at least 1 and at most 4 personal skills/hobbies.</span>
 			<div class='form__skills--input'>
 				<label>Skill nr.1:</label>
-				<input class='hobby' type="text" name='skills' maxlength='20' required />
+				<input onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' required />
 				<p>Maximum 20 characters.</p>
 			</div>
 			<div class='form__skills--input'>
 				<label>Skill nr.2:</label>
-				<input class='hobby' type="text" name='skills' maxlength='20' />
+				<input onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
 			<div class='form__skills--input'>
 				<label>Skill nr.3:</label>
-				<input class='hobby' type="text" name='skills' maxlength='20' />
+				<input onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
 			<div class='form__skills--input'>
 				<label>Skill nr.4:</label>
-				<input class='hobby' type="text" name='skills' maxlength='20' />
+				<input onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p>Maximum 20 characters. Leave it empty to skip. </p>
 			</div>
 		</div>
@@ -163,37 +169,37 @@
 			<div class='form__work--input'>
 				<h1>Job nr. 1</h1>
 				<label>Position: </label>
-				<input type="text" name='work' id='position-1' maxlength='25' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='position-1' maxlength='25' required/>
 				<p>Please enter your job function. Maximum 25 characters.</p>
 				<label>Company: </label>
-				<input type="text" name='work' id='company-1' maxlength='35' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='company-1' maxlength='35' required/>
 				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
 				<label>Describe your job: </label>
 				<textarea type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
 				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
 				<label>When did you START working: </label>
-				<input type="text" name='work' id='start-1' maxlength='14' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='start-1' maxlength='14' required/>
 				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
 				<label>When did you STOP working: </label>
-				<input type="text" name='work' id='stop-1' maxlength='14' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='stop-1' maxlength='14' required/>
 				<p>Name and localization of company you were working for. Maximum 14 characters.</p>
 			</div>
 			<div class='form__work--input'>
 				<h1>Job nr. 2</h1>
 				<label>Position: </label>
-				<input type="text" name='work' id='position-2' maxlength='25' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='position-2' maxlength='25' required/>
 				<p>Please enter your job function. Maximum 25 characters.</p>
 				<label>Company: </label>
-				<input type="text" name='work' id='company-2' maxlength='35' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='company-2' maxlength='35' required/>
 				<p>Name and localization of company you were working for. Maximum 35 characters.</p>
 				<label>Describe your job: </label>
 				<textarea type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
 				<p>Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
 				<label>When did you START working: </label>
-				<input type="text" name='work' id='start-2' maxlength='14' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='start-2' maxlength='14' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 				<label>When did you STOP working: </label>
-				<input type="text" name='work' id='stop-2' maxlength='14' required/>
+				<input onkeypress="validateInput(event)" type="text" name='work' id='stop-2' maxlength='14' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 			</div>
 		</div>
@@ -204,37 +210,37 @@
 			<div class='form__education--input'>
 				<h1>School nr. 1</h1>
 				<label>Profile: </label>
-				<input type="text" name='education' maxlength='25' id='profile-1' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='25' id='profile-1' required/>
 				<p>Please enter profile of your class. Maximum 25 characters.</p>
 				<label>School/Univeristy name: </label>
-				<input type="text" name='education' maxlength='35' id='school-1' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='35' id='school-1' required/>
 				<p>Name and localization of school where you were taking classes. Maximum 35 characters.</p>
 				<label>Diplomas/Accomplishments: </label>
-				<input type="text" name='work' id='school-description-1'  maxlength='50' required />
+				<input onkeypress="validateInput(event)" type="text" name='work' id='school-description-1'  maxlength='50' required />
 				<p>Please add type of diploma you have obtained and/or other important accomplishments. Maximum 50 characters.</p>
 				<label>When did you START education: </label>
-				<input type="text" name='education' maxlength='14' id='school-start-1' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='14' id='school-start-1' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 				<label>When did you STOP education: </label>
-				<input type="text" name='education' maxlength='14' id='school-stop-1' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='14' id='school-stop-1' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 			</div>
 			<div class='form__education--input'>
 				<h1>School nr. 2</h1>
 				<label>Profile: </label>
-				<input type="text" name='education' maxlength='25' id='profile-2' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='25' id='profile-2' required/>
 				<p>Please enter profile of your class. Maximum 25 characters.</p>
 				<label>School/Univeristy name: </label>
-				<input type="text" name='education' maxlength='35' id='school-2' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='35' id='school-2' required/>
 				<p>Name and localization of school where you were taking classes. Maximum 35 characters.</p>
 				<label>Diplomas/Accomplishments: </label>
-				<input type="text" name='work' id='school-description-2'  maxlength='50' required />
+				<input onkeypress="validateInput(event)" type="text" name='work' id='school-description-2'  maxlength='50' required />
 				<p>Please add type of diploma you have obtained and/or other important accomplishments. Maximum 50 characters.</p>
 				<label>When did you START education: </label>
-				<input type="text" name='education' maxlength='14' id='school-start-2' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='14' id='school-start-2' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 				<label>When did you STOP education: </label>
-				<input type="text" name='education' maxlength='14' id='school-stop-2' required/>
+				<input onkeypress="validateInput(event)" type="text" name='education' maxlength='14' id='school-stop-2' required/>
 				<p>Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
 			</div>
 		</div>
@@ -244,22 +250,22 @@
 			<span>Please fill in at least 1 and at most 4 additional courses or trainings. For example: Drive License, Forklift Operator, Special Dental Nurse Training etc.</span>
 			<div class='form__courses--input'>
 				<label>Course nr.1:</label>
-				<input class='skill' type="text" name='courses' maxlength='50' required />
+				<input onkeypress="validateInput(event)" class='skill' type="text" name='courses' maxlength='50' required />
 				<p>Maximum 50 characters.</p>
 			</div>
 			<div class='form__courses--input'>
 				<label>Course nr.2:</label>
-				<input class='skill' type="text" name='courses' maxlength='50' />
+				<input onkeypress="validateInput(event)" class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
 			<div class='form__courses--input'>
 				<label>Course nr.3:</label>
-				<input class='skill' type="text" name='courses' maxlength='50' />
+				<input onkeypress="validateInput(event)" class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
 			<div class='form__courses--input'>
 				<label>Course nr.4:</label>
-				<input class='skill' type="text" name='courses' maxlength='50' />
+				<input onkeypress="validateInput(event)" class='skill' type="text" name='courses' maxlength='50' />
 				<p>Maximum 50 characters. Leave it empty to skip. </p>
 			</div>
 		</div>
@@ -267,6 +273,12 @@
 		<button name='submit' class="form__submit" href=''>Create Resume.pdf</button>
 
 	</form>
+
+	<div class="validationWarning" style="display:none">
+		<i class="far fa-times-circle" onClick="displayValidationWarning()" style="font-size:3rem"></i>
+		<h1>WARNING!</h1>
+		<h3>This characters are not allowed:'#<>\/'</h3>
+	</div>
 
 	<script src='/scripts/script.js'></script>
 </body>
