@@ -97,6 +97,7 @@ body {
   left: 0;
   z-index: 9; }
   .nav__section {
+    flex: 1;
     transition: all .2s;
     padding: 0 2rem;
     min-height: 100%;
@@ -148,7 +149,7 @@ body {
 
 .form {
   width: 90%;
-  margin: 5rem auto;
+  margin: 0 auto 5rem auto;
   padding: 2rem;
   border: 1px solid #d3d3d3;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);

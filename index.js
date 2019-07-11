@@ -55,7 +55,7 @@ app.post('/createPdf', (req,res)=>{
 		data.root = 'http://localhost:5000'
 	}
 
-	console.log(data)
+	console.log(data) //remove it
 
 	const compile = async (templateName)=>{
 		const filePath =  path.join(process.cwd(),'templates',`${templateName}.html`)

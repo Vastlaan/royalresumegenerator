@@ -285,9 +285,11 @@ const validateInput = (event) =>{
 	let kCd = event.keyCode || event.which
 
 	//fix for chrome on android
+	console.log(kCd)
 	if(kCd===0 || kCd===229){
 		kCd= getKeyCode(this.value)
 	}
+	console.log(kCd)	//remove it
 	// end of fix
 	if(notAllowedCodes.includes(kCd)){
 		event.preventDefault()
