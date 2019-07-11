@@ -6,6 +6,10 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const multer = require('multer')
 
+const app = express()
+
+app.use(express.static(path.join(__dirname,'public')))
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'tmp/my-uploads')
@@ -17,9 +21,7 @@ const storage = multer.diskStorage({
  
 const upload = multer({ storage: storage }).single("uploadImage")
 
-const app = express()
 
-app.use(express.static(path.join(__dirname,'public')))
 app.use(bodyParser.json())
 
 app.get('/templates/style.css', (req,res)=>{
