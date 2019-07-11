@@ -19,7 +19,7 @@ const upload = multer({ storage: storage }).single("uploadImage")
 
 const app = express()
 
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static('public'))
 app.use(bodyParser.json())
 
 app.get('/templates/style.css', (req,res)=>{
@@ -28,6 +28,7 @@ app.get('/templates/style.css', (req,res)=>{
 app.get('/tmp/my-uploads/me.jpg', (req,res)=>{
 	res.sendFile(path.join(__dirname,'tmp/my-uploads','me.jpg'))
 })
+app.use('/img', express.static(__dirname+'/public/img'))
 
 app.post('/uploadPhoto',(req,res)=>{
 	upload(req, res, function (err) {
