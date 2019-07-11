@@ -19,7 +19,7 @@ const upload = multer({ storage: storage }).single("uploadImage")
 
 const app = express()
 
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,'public')))
 app.use(bodyParser.json())
 
 app.get('/templates/style.css', (req,res)=>{
@@ -27,9 +27,6 @@ app.get('/templates/style.css', (req,res)=>{
 })
 app.get('/tmp/my-uploads/me.jpg', (req,res)=>{
 	res.sendFile(path.join(__dirname,'tmp/my-uploads','me.jpg'))
-})
-app.get('/img/*', (req,res)=>{
-	res.sendFile(path.join(__dirname,'public/images','collection-SVG-sprite.svg'))
 })
 
 app.post('/uploadPhoto',(req,res)=>{
@@ -48,10 +45,9 @@ app.post('/uploadPhoto',(req,res)=>{
   })
 })
 app.post('/createPdf', (req,res)=>{
-
 	
 	const data=req.body
-	console.log(data)
+
 	if(process.env.NODE_ENV==='production'){
 		data.root = 'https://royalcvmaker.herokuapp.com'
 	}else{
