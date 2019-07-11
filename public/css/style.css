@@ -52,7 +52,10 @@ body {
       padding: 1rem;
       display: block;
       font-size: 2rem;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: color .2s; }
+      .mainNav__left--i:hover {
+        background-color: #590034; }
     .mainNav__left--section {
       min-height: 100%;
       background-color: #003459;

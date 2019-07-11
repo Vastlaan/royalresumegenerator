@@ -20,6 +20,11 @@
 			display: block;
 			font-size: 2rem;
 			cursor:pointer;	
+			transition:color .2s;
+
+			&:hover{
+				background-color:$color-purple;
+			}
 		}
 		&--section{
 			min-height:100%;
