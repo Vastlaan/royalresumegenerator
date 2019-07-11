@@ -28,6 +28,9 @@ app.get('/templates/style.css', (req,res)=>{
 app.get('/tmp/my-uploads/me.jpg', (req,res)=>{
 	res.sendFile(path.join(__dirname,'tmp/my-uploads','me.jpg'))
 })
+app.get('/img/*', (req,res)=>{
+	res.sendFile(path.join(__dirname,'public/images','collection-SVG-sprite.svg'))
+})
 
 app.post('/uploadPhoto',(req,res)=>{
 	upload(req, res, function (err) {
