@@ -8,13 +8,13 @@
 	align-items: center;
 
 	@include respond(m){
-		height:70vh;
+		height:75vh;
 	}
 	@include respond(s){
-		height:62vh;
+		height:70vh;
 	}
 	@include respond(xs){
-		height:55vh;
+		height:65vh;
 	}
 
 	&__title{
