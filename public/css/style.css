@@ -1,3 +1,11 @@
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
 ::-webkit-scrollbar {
   display: none; }
 
@@ -746,3 +754,37 @@ body {
     font-size: 2.6rem;
     color: #590034;
     cursor: pointer; }
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 13;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  flex-direction: column;
+  justify-content: center; }
+  .loading h1 {
+    color: #00171F;
+    font-family: "Iceberg", cursive;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: .4rem;
+    text-align: center; }
+  .loading h3 {
+    color: #00171F;
+    font-family: "Poiret One", cursive;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .loading h3 {
+        font-size: 2.5rem; } }
+  .loading__pulsate-1 {
+    animation: pulsate .5s infinite linear; }
+  .loading__pulsate-2 {
+    animation: pulsate .5s .2s infinite linear; }
+  .loading__pulsate-3 {
+    animation: pulsate .5s .4s infinite linear; }

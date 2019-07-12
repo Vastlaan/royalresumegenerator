@@ -44,3 +44,50 @@
 		cursor:pointer;
 	}
 }
+
+.loading{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 13;
+	width:100vw;
+	height:100vh;
+	background-color: rgba(white,.9);
+	flex-direction: column;
+	justify-content: center;
+
+	h1{
+		color:$color-blue-dark;
+		font-family: $font-iceberg;
+		font-size: 6rem;
+		font-weight: 300;
+		letter-spacing: .4rem;
+		text-align: center;
+	}
+
+	h3{
+		color:$color-blue-dark;
+		font-family: $font-poiret;
+		font-size: 4rem;
+		font-weight: 300;
+		letter-spacing: .2rem;
+		text-align: center;
+
+		@include respond(s){
+			font-size: 2.5rem;
+		}
+	}
+
+	&__pulsate{
+
+		&-1{
+			animation: pulsate .5s infinite linear;
+		}
+		&-2{
+			animation: pulsate .5s .2s infinite linear;
+		}
+		&-3{
+			animation: pulsate .5s .4s infinite linear;
+		}
+	}
+}

@@ -200,6 +200,7 @@ const image = document.querySelector("#file").files[0];
 let photo = new FormData();
 photo.append("uploadImage", image);
 
+switchDisplayLoading() //trigger loading block
 
 const response = await fetch('/uploadPhoto',{
 	method:"POST",
@@ -229,16 +230,23 @@ fetch('/createPdf', {
     },
     body: JSON.stringify(data)
 })
-	.then(res=>res.blob())
+	.then(res=>{
+		return res.blob()
+	})
 	.then(blob=>{
 		const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
+        console.log(a)
         a.download = "myCv.pdf";
         document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
         a.click();    
         a.remove();  //afterwards we remove the element again  
-	})      
+        switchDisplayLoading() //remove loading block
+	}).catch(error=>{
+		console.error
+		switchDisplayLoading() //remove loading block
+	})     
 }
 
 // responsible for menu navigation to appropriate section
@@ -320,10 +328,23 @@ const switchLanguage = (lang) =>{
 
 	elements.forEach(element=>{
 		if(element.getAttribute('lang')===lang){
-			element.style.display = ""
+			 element.style.display = ""
 		}else{
 			element.style.display= "none"
 		}
 	})
 }
 switchLanguage("en")
+
+//display loading block while creating a pdf file
+
+const switchDisplayLoading = () =>{
+	const loadingBlock = document.querySelector('.loading')
+	const style = window.getComputedStyle(loadingBlock)
+	console.log(style.display)
+	if(style.display==="flex"){
+		loadingBlock.style.display="none"
+	}else{
+		loadingBlock.style.display="flex"
+	}
+}
