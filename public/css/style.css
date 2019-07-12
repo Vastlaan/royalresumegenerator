@@ -26,7 +26,7 @@ html {
   @media only screen and (max-width: 37.5em) {
     html {
       font-size: 45%; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 26.3em) {
     html {
       font-size: 40%; } }
   @media only screen and (min-width: 100em) {
@@ -119,7 +119,7 @@ body {
     @media only screen and (max-width: 62.5em) {
       .nav__section {
         padding: 0 1rem; } }
-    @media only screen and (max-width: 25em) {
+    @media only screen and (max-width: 26.3em) {
       .nav__section {
         padding: 0 .5rem; } }
     .nav__section:hover {
@@ -153,7 +153,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .header {
       height: 70vh; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 26.3em) {
     .header {
       height: 65vh; } }
   .header__title {
@@ -180,7 +180,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .examples {
       transform: translateY(-20%); } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 26.3em) {
     .examples {
       transform: translateY(-35%); } }
   .examples__img {
@@ -191,22 +191,22 @@ body {
     .examples__img--1 {
       transform: translate(40%, -10%);
       z-index: 8; }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.3em) {
         .examples__img--1 {
           display: none; } }
       .examples__img--1:hover {
         transform: translate(40%, -10%) scale(1.15); }
     .examples__img--2 {
       transform: translate(30%, 0); }
-      @media only screen and (max-width: 25em) {
-        .examples__img--2 {
-          transform: translate(50%, -20%);
-          width: 50%; }
-          .examples__img--2:hover {
-            transform: scale(1.15) translate(50%, 0); } }
       .examples__img--2:hover {
         transform: scale(1.15);
         z-index: 9; }
+      @media only screen and (max-width: 26.3em) {
+        .examples__img--2 {
+          transform: translate(30%, -10%);
+          width: 65%; }
+          .examples__img--2:hover {
+            transform: scale(1.15) translate(25%, 0%); } }
 
 .form {
   width: 90%;
@@ -265,7 +265,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .form__photo--input {
           width: 90%; } }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.3em) {
         .form__photo--input {
           width: 100%; } }
       .form__photo--input label {
@@ -331,7 +331,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .form__contact--input {
           width: 90%; } }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.3em) {
         .form__contact--input {
           width: 100%; } }
       .form__contact--input label {
@@ -571,7 +571,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .form__work--input {
           width: 90%; } }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.3em) {
         .form__work--input {
           width: 100%; } }
       .form__work--input h1 {
@@ -657,7 +657,7 @@ body {
       @media only screen and (max-width: 37.5em) {
         .form__education--input {
           width: 90%; } }
-      @media only screen and (max-width: 25em) {
+      @media only screen and (max-width: 26.3em) {
         .form__education--input {
           width: 100%; } }
       .form__education--input h1 {
