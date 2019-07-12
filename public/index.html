@@ -3,8 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/favicon.ico">
 	<title>Free Resume Generator</title>
 	<link href="https://fonts.googleapis.com/css?family=Montez|Poiret+One|Iceberg|Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+	<!-- Fonts for Polish version -->
+	<link href="https://fonts.googleapis.com/css?family=Changa:300,400,700|Sarpanch:400,500,600,700,800,900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 
@@ -75,11 +78,20 @@
 			<h1 class='header__title' lang="pl">Rewelacyjne CV</h1>
 	</header>
 
+	<section class="examples">
+
+		<img class="examples__img examples__img--1" src="/images/resume1.png" alt="resume example" />
+		<img class="examples__img examples__img--2" src="/images/resume1.png" alt="resume example" />
+		
+	</section>
+
 	<form class='form' onSubmit='submitForm(event)'>
 
 		<div class='form__photo section' id="section__photo">
 			<h3 class='form__photo--header' lang="en">Section photo</h3>
 			<h3 class='form__photo--header' lang="pl">Sekcja Foto</h3>
+			<span lang="en">We highly recommend using photo of standard 'passport' sizes. That means the proportion between width : height should be around 3.5 : 4.5 units. For example: width=350px, height=450px or width=12.5cm height=16cm. Other sizes are allowed, but may not look perfect on CV.</span>
+			<span lang="pl">Zalecamy użycie fotografii o standardowych wymiarach 'paszportowych'. To znaczy, że proporcja pomiędzy szerokością a wysokością zdjęcia powinna wynieść około 3.5 : 4.5. Na przykład: szerokość=350px wysokość=450px albo szerokość=12.5cm wysokość=16cm. Inne wymiary są dozwolone, jednak mogą mieć negatywny wpływ na wygląd wygenerowanego CV.</span>
 			<div class='form__photo--input'>
 				<label for='file'><i class="fas fa-upload"></i></label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>

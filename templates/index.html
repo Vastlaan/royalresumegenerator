@@ -6,8 +6,9 @@
 	<meta name="author" content="Michal Antczak">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="{{root}}/templates/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montez|Poiret+One|Iceberg|Rajdhani:300,400,500,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{root}}/templates/style.css">
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" >
 </head>
 <body>
@@ -20,7 +21,7 @@
 		</div>
 		
 		<div class="frame__side--section adjust" >
-			<h1 class="frame__side--section-header">Contact</h1>
+			<h1 class="frame__side--section-header">{{contactHeader}}</h1>
 			<div class="frame__side--section-content adjust" >
 				<p class='contact'><i class="fas fa-phone contact__phone"></i>{{{phone}}}</p>
 				<p class='contact'><i class="fas fa-envelope contact__mail"></i>{{{email}}}</p>
@@ -29,7 +30,7 @@
 		</div>
 
 		<div class="frame__side--section fit">
-			<h1 class="frame__side--section-header">About me</h1>
+			<h1 class="frame__side--section-header">{{aboutHeader}}</h1>
 			<div class="frame__side--section-content fit">
 				<p>{{{about}}}</p>
 
@@ -37,7 +38,7 @@
 		</div>
 
 		<div class="frame__side--section adjust">
-			<h1 class="frame__side--section-header">Languages</h1>
+			<h1 class="frame__side--section-header">{{languageHeader}}</h1>
 			<div class="frame__side--section-centerContent">
 				{{#lang}}
 					<div class='lang1'>
@@ -49,7 +50,7 @@
 		</div>
 
 		<div class="frame__side--section adjust">
-			<h1 class="frame__side--section-header">Interests</h1>
+			<h1 class="frame__side--section-header">{{skillsHeader}}</h1>
 			<div class="frame__side--section-interestsContent">
 				<ul>
 					{{#hobbies}}
@@ -67,7 +68,7 @@
 		</header>
 		<div class="frame__main--work">		
 				<span class='icon-wrapper-green'><i class="fas fa-handshake icon"></i></span>	
-				<h1 class="frame__main--work-header">Professional experience</h1>
+				<h1 class="frame__main--work-header">{{workHeader}}</h1>
 				{{#jobs}}
 				<div class="frame__main--work-date"><span>{{{start}}}</span> <span>{{{stop}}}</span></div>
 				<p class="frame__main--work-description">
@@ -79,7 +80,7 @@
 		</div>
 		<div class="frame__main--education">
 			<span class='icon-wrapper-blue'><i class="fas fa-graduation-cap icon"></i></span>
-			<h1 class="frame__main--education-header">Education</h1>
+			<h1 class="frame__main--education-header">{{educationHeader}}</h1>
 			{{#schools}}
 			<div class="frame__main--education-date"><span>{{{start}}}</span> <span>{{{stop}}}</span></div>
 			<p class="frame__main--education-description">
@@ -97,7 +98,7 @@
 		</div>
 		<div class="frame__main--additional">
 			<span class='icon-wrapper-pink'><i class="fas fa-lightbulb icon"></i></span>
-			<h1 class="frame__main--additional-header">Additional skills</h1>
+			<h1 class="frame__main--additional-header">{{coursesHeader}}</h1>
 			
 		</div>
 		<ul class="frame__main--list">

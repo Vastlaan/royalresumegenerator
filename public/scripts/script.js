@@ -209,6 +209,11 @@ const response = await fetch('/uploadPhoto',{
 })
 console.log(response.json())
 
+let templateLanguage = "en"
+
+if(document.querySelector('html').getAttribute("lang")==="pl"){
+	templateLanguage="pl"
+}
 const data = {
 	name: event.target.name.value,
 	email: event.target.email.value,
@@ -219,7 +224,8 @@ const data = {
 	hobbies: getHobbiesValues(),
 	jobs: getJobsValues(),
 	schools: getSchoolsValues(),
-	skills: getSkillsValues()
+	skills: getSkillsValues(),
+	templateLanguage
 }
 
 fetch('/createPdf', {
@@ -319,10 +325,21 @@ const displayValidationWarning = () =>{
 		return warning.style.display = "block"
 	}
 }
+//switch Fonts for polish text
+
+const switchFonts = () =>{
+	const polishTags = document.querySelectorAll("[lang='pl']")
+	polishTags.forEach(tag=>{
+		if(tag.tagName==="LABEL" || tag.tagName==="label"){
+			tag.style.fontFamily="'Sarpanch', sans-serif"
+		}
+	})
+}
 
 //switch language
 
 const switchLanguage = (lang) =>{
+	switchFonts()
 	const elements = document.querySelectorAll('[lang]')
 	document.querySelector('html').setAttribute('lang',lang)
 

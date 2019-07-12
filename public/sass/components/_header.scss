@@ -7,6 +7,16 @@
 	justify-content: center;
 	align-items: center;
 
+	@include respond(m){
+		height:70vh;
+	}
+	@include respond(s){
+		height:62vh;
+	}
+	@include respond(xs){
+		height:55vh;
+	}
+
 	&__title{
 		font-family: $font-poiret;
 		font-size: 7rem;

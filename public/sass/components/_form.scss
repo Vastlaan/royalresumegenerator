@@ -19,7 +19,10 @@
 		flex-direction: column;
 		margin-bottom: 5rem;
 
-
+		span{
+			@include formSectionPara1
+			margin-bottom: 2.5rem;
+		}
 		p{
 			text-align: center;
 			font-family: $font-poiret;

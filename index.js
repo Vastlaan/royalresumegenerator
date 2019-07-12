@@ -5,6 +5,7 @@ const fs = require('fs-extra')
 const path = require('path')
 const bodyParser = require('body-parser')
 const multer = require('multer')
+const {ENGLISH_HEADERS, POLISH_HEADERS} = require('./headers.js')
 
 const app = express()
 
@@ -48,12 +49,19 @@ app.post('/uploadPhoto',(req,res)=>{
 })
 app.post('/createPdf', (req,res)=>{
 	
-	const data=req.body
+	let data=req.body
 
 	if(process.env.NODE_ENV==='production'){
 		data.root = 'https://royalcvmaker.herokuapp.com'
 	}else{
 		data.root = 'http://localhost:5000'
+	}
+
+
+	if(data.templateLanguage==="pl"){
+		Object.assign(data, POLISH_HEADERS)
+	}else{
+		Object.assign(data,ENGLISH_HEADERS)
 	}
 
 	console.log(data) //remove it
