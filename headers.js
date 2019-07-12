@@ -5,7 +5,8 @@ const ENGLISH_HEADERS={
 	skillsHeader:"Skills",
 	workHeader:"Professional Experience",
 	educationHeader:"Education",
-	coursesHeader:"Additional Courses"
+	coursesHeader:"Additional Courses",
+	style:"style.css"
 }
 
 const POLISH_HEADERS={
@@ -15,7 +16,8 @@ const POLISH_HEADERS={
 	skillsHeader:"Umiejętności",
 	workHeader:"Doświadczenie Zawodowe",
 	educationHeader:"Edukacja",
-	coursesHeader:"Dodatkowe kursy"
+	coursesHeader:"Dodatkowe kursy",
+	style:"stylepl.css"
 }
 
 module.exports = { ENGLISH_HEADERS, POLISH_HEADERS }

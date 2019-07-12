@@ -1,0 +1,421 @@
+*,
+*::after,
+*::before{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+html{
+	box-sizing: border-box;
+  	background-color: white;
+  	font-size: 62.5%;
+  	line-height: 1.6;
+}
+body{
+	width: 793px;
+	height: 1122px;
+	background-color: white;
+}
+.frame{
+	display: flex;
+	width:100%;
+	height:100%;
+	font-family: "Times", cursive;
+}
+/*=================================== SIDE SECTION =================================================*/
+/*=================================== SIDE SECTION =================================================*/
+.frame__side{
+	flex:0 0 35%;
+	background-image: linear-gradient(to bottom, #003D81, #003D81);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 1rem 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.frame__side--photo {
+	width: 80%;
+	/*height: calc((100vw*0.35)*0.8);*/
+	/*border-radius: 50%;*/
+	margin: 1rem auto;
+	overflow: hidden;
+  flex: .8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.frame__side--photo-box {
+  width: 80%;
+  /*height:100%;*/
+  /*border-radius: 50%;*/
+  margin:0 auto;
+  overflow: hidden;
+
+}
+.frame__side--photo-box img {
+	display: block;
+	width: 100%;
+	margin:0 auto; 
+}
+.frame__side--section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1; }
+.frame__side--section-header {
+	width: 100%;
+	padding: 1rem;
+	background-color: #001731;
+	color: white;
+	text-align: center;
+	font-family: "Times", cursive;
+	font-size: 2rem;
+	letter-spacing: .4rem;
+	text-transform: uppercase; }
+.frame__side--section-content {
+	flex: 1;
+	padding: 1rem;
+	padding-left: 1rem;
+	background-color: #003D81;
+	color: white;
+	font-family: "Times", cursive;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: .2rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center; }
+  .frame__side--section-content>p {
+  width:250px;
+  word-wrap: break-word; }
+
+.frame__side--section-centerContent {
+	flex: 1;
+	padding: 1rem;
+	padding-left: 2rem;
+	background-color: #003D81;
+	color: white;
+	font-family: "Times", cursive;
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; }
+
+.frame__side--section-interestsContent {
+  flex: 1;
+  padding: 1rem;
+  padding-left: 2rem;
+  background-color: #003D81;
+  color: white;
+  font-family: "Times", cursive;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.frame__side--section-interestsContent>ul {
+  width:100%;
+  list-style: none;
+  margin:0 auto;
+   }
+.frame__side--section-interestsContent>ul>li {
+  font-family: "Times", cursive;
+  letter-spacing: .2rem;
+  margin:.3rem auto;
+   }
+.frame__side--section-interestsContent>ul>li>i {
+  color:green;
+  margin-right: 1rem;
+   }
+
+/*=================================== CONTACT ICONS =================================================*/
+/*=================================== CONTACT ICONS =================================================*/
+.contact {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  text-align: left;
+  font-size: 1.3rem; }
+.contact i {
+margin-right: 1rem; }
+.contact__phone {
+color: #84E45B; }
+.contact__mail {
+color: #E45B84; }
+.contact__place {
+color: #5BC9E4; }
+
+
+/*=================================== LANGUAGES SECTION =================================================*/
+/*=================================== LANGUAGES SECTION =================================================*/
+.lang1 {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0; }
+  .lang1__strip {
+    flex: 0 0 70%;
+    height: 8px;
+    background-color: white;
+    border-radius: 3px;
+    position: relative; }
+    .lang1__strip::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: inherit;
+      height: 4px;
+      border-radius: 5px;
+      background-color: #E45B84; }
+  .lang1__text {
+    flex: 0 0 30%;
+    padding-left: 1rem; }
+
+.lang2 {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0; }
+  .lang2__strip {
+    flex: 0 0 70%;
+    height: 8px;
+    background-color: white;
+    border-radius: 3px;
+    position: relative; }
+    .lang2__strip::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 80%;
+      height: 4px;
+      border-radius: 5px;
+      background-color: #E45B84; }
+  .lang2__text {
+    flex: 0 0 30%;
+    padding-left: 1rem; }
+
+.lang3 {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0; }
+  .lang3__strip {
+    flex: 0 0 70%;
+    height: 8px;
+    background-color: white;
+    border-radius: 3px;
+    position: relative; }
+    .lang3__strip::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      border-radius: 5px;
+      background-color: #E45B84; }
+  .lang3__text {
+    flex: 0 0 30%;
+    padding-left: 1rem; }
+
+/*=================================== MAIN SECTION =================================================*/
+/*=================================== MAIN SECTION =================================================*/
+
+.frame__main {
+    height: 100%;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column; }
+.frame__main--header {
+  width: 100%;
+  margin-top: 5%; }
+  .frame__main--header h1 {
+    font-family: "Times", cursive;
+    font-size: 5rem;
+    font-weight: 200;
+    text-align: center; }
+  .frame__main--header h2 {
+    font-family: "Courier New", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .frame__main--header h2 i {
+      color: #5B84E4;
+      margin-right: 1rem;
+      text-shadow: 0.2rem 0.2rem 0.7rem rgba(0, 0, 0, 0.3); }
+.frame__main--work {
+  margin: 2.5rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 30% repeat(2, 1fr);
+  grid-row-gap: 2rem; }
+  .frame__main--work-header {
+    font-family: "Times", cursive;
+    font-size: 2.2rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+    align-self: center;
+    justify-self: start;
+    margin-left: 1rem; }
+  .frame__main--work-date {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Courier New", sans-serif;
+    font-size: 1.1rem; }
+  .frame__main--work-description {
+    align-self: center;
+    justify-self: center;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Times", cursive;
+    width:100%;
+    overflow-wrap: break-word;
+    text-align: center; }
+    .frame__main--work-description-who {
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: .2rem; }
+    .frame__main--work-description-where {
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .frame__main--work-description-what {
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-align: left; }
+.frame__main--education {
+  margin: 2.5rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 30% repeat(2, 1fr);
+  grid-row-gap: 2rem; }
+  .frame__main--education-header {
+    font-family: "Times", cursive;
+    font-size: 2.2rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+    align-self: center;
+    justify-self: start;
+    margin-left: 1rem; }
+  .frame__main--education-date {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    font-family: "Courier New", sans-serif;
+    font-size: 1.1rem; }
+  .frame__main--education-description {
+    align-self: center;
+    justify-self: center;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Times", cursive;
+    text-align: center; }
+    .frame__main--education-description-who {
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: .2rem; }
+    .frame__main--education-description-where {
+      font-weight: 600;
+      font-size: 1.4rem; }
+    .frame__main--education-description-what {
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-align: left; }
+.frame__main--additional {
+  margin: 2.5rem;
+  margin-top: 5rem;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: 20% 1fr; }
+  .frame__main--additional-header {
+    font-family: "Times", cursive;
+    font-size: 2.2rem;
+    letter-spacing: .5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: black;
+    align-self: center;
+    justify-self: start;
+    margin-left: 1rem; }
+.frame__main--list {
+  list-style: none;
+  font-family: "Times", cursive;
+  font-size: 1.6rem;
+  margin-left: 2rem; }
+  .frame__main--list li {
+    margin-top: 1rem; }
+    .frame__main--list li i {
+      color: #84E45B;
+      margin-right: 1rem; }
+
+/*=================================== UTILS =================================================*/
+/*=================================== UTILS =================================================*/
+
+.fit {
+  flex:1; 
+  display:flex;
+  justify-content: center;
+}
+.adjust {
+  flex: 0 0 auto; 
+  display:flex;
+  justify-content: center;
+}
+
+#min-height{
+  min-height:8rem;
+}
+
+.icon-wrapper-blue {
+  color: #003D81;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #003D81; }
+
+.icon-wrapper-green {
+  color: #84E45B;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #84E45B; }
+
+.icon-wrapper-pink {
+  color: #E45B84;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #E45B84; }
+
+.icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
