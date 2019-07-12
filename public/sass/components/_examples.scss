@@ -37,7 +37,7 @@
 		&--2{
 			transform:translate(30%,0);
 			&:hover{
-				transform: scale(1.15);
+				transform: translate(30%,0) scale(1.15);
 				z-index: 9;
 			}
 			@include respond(xs){

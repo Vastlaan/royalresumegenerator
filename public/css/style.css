@@ -199,7 +199,7 @@ body {
     .examples__img--2 {
       transform: translate(30%, 0); }
       .examples__img--2:hover {
-        transform: scale(1.15);
+        transform: translate(30%, 0) scale(1.15);
         z-index: 9; }
       @media only screen and (max-width: 26.3em) {
         .examples__img--2 {
