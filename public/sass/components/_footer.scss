@@ -1,0 +1,40 @@
+.footer{
+	width:100%;
+	padding:2rem;
+	background-color: $color-blue-dark;
+
+	&__copy{
+		color:white;
+		font-family: "Courier New", sans-serif;
+		font-size: 1.6rem;
+		margin:2rem;
+		text-align: center;
+
+		a{
+			display:inline-block;
+			text-decoration: none;
+			color:white;
+			padding:.5rem 2rem;
+			background-color: $color-purple;
+			border-radius: 3px;
+			transition:transform .2s;
+
+			&:hover{
+				transform:scale(1.1) rotate(3deg);
+			}
+		}
+
+	}
+
+	&__credits{
+		color:$color-grey-light;
+		font-family: "Courier New", sans-serif;
+		font-size: 1rem;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			color:$color-blue-light;
+		}
+	}
+}

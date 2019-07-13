@@ -60,7 +60,7 @@ body {
     .mainNav__left--i {
       padding: 1rem;
       display: block;
-      font-size: 2rem;
+      font-size: 2.5rem;
       cursor: pointer;
       transition: color .2s; }
       .mainNav__left--i:hover {
@@ -780,6 +780,35 @@ body {
 
 #lang3 {
   display: none; }
+
+.footer {
+  width: 100%;
+  padding: 2rem;
+  background-color: #00171F; }
+  .footer__copy {
+    color: white;
+    font-family: "Courier New", sans-serif;
+    font-size: 1.6rem;
+    margin: 2rem;
+    text-align: center; }
+    .footer__copy a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      padding: .5rem 2rem;
+      background-color: #590034;
+      border-radius: 3px;
+      transition: transform .2s; }
+      .footer__copy a:hover {
+        transform: scale(1.1) rotate(3deg); }
+  .footer__credits {
+    color: #d3d3d3;
+    font-family: "Courier New", sans-serif;
+    font-size: 1rem;
+    text-align: center; }
+    .footer__credits a {
+      text-decoration: none;
+      color: #10A2BD; }
 
 .validationWarning {
   position: fixed;
