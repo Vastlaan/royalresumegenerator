@@ -336,10 +336,22 @@ const switchFonts = () =>{
 	})
 }
 
+//switch resume 
+
+const switchResume = (lang) =>{
+	const resume = document.querySelector('#switchResume')
+	if(lang==="pl"){
+		resume.setAttribute('src',"/images/resume2.png")
+	}else{
+		resume.setAttribute('src',"/images/resume1.png")
+	}
+}
+
 //switch language
 
 const switchLanguage = (lang) =>{
 	switchFonts()
+	switchResume(lang)
 	const elements = document.querySelectorAll('[lang]')
 	document.querySelector('html').setAttribute('lang',lang)
 
@@ -350,6 +362,7 @@ const switchLanguage = (lang) =>{
 			element.style.display= "none"
 		}
 	})
+	
 }
 switchLanguage("en")
 

@@ -80,8 +80,8 @@
 
 	<section class="examples">
 
-		<img class="examples__img examples__img--1" src="/images/resume2.png" alt="resume example" />
-		<img class="examples__img examples__img--2" src="/images/resume1.png" alt="resume example" />
+		<img class="examples__img examples__img--1" id="switchResume" src="/images/resume1.png" alt="resume example" />
+		<img class="examples__img examples__img--2" src="/images/resume3.png" alt="resume example" />
 		
 	</section>
 
@@ -113,21 +113,21 @@
 				<label lang="pl">Imię: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='name' maxlength='19' required/>
 				<p lang="en">Please enter your name. Maximum 19 characters.</p>
-				<p lang="pl">Proszę podać imię i nazwisko. Maximum 19 znaków.</p>
+				<p lang="pl">Proszę podać imię i nazwisko. Maksimum 19 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Email: </label>
 				<label lang="pl">Email: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="email" name='email' maxlength='25' required/>
 				<p lang="en">Please enter your email address. Maximum 25 characters.</p>
-				<p lang="pl">Proszę podać adres email. Maximum 25 znaków.</p>
+				<p lang="pl">Proszę podać adres email. Maksimum 25 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Phone: </label>
 				<label lang="pl">Telefon: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="tel" name='phone' maxlength='20' required/>
 				<p lang="en">Please enter your phone number. Maximum 20 characters.</p>
-				<p lang="pl">Proszę podać numer telefonu. Maximum 20 znaków.</p>
+				<p lang="pl">Proszę podać numer telefonu. Maksimum 20 znaków.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Address: </label>
@@ -136,7 +136,7 @@
 				<p lang="en">Please fill in city and/or country you live in.</p>
 				<p lang="pl">Proszę podać miasto i/lub kraj zamieszkania.</p>
 				<p lang="en">Example: "Houston, United States". Maximum 25 characters.</p>
-				<p lang="pl">Na przykład: "Gdynia, Polska". Maximum 25 characters.</p>
+				<p lang="pl">Na przykład: "Gdynia, Polska". Maksimum 25 znaków.</p>
 			</div>
 		</div>
 
@@ -204,28 +204,28 @@
 				<label lang="pl">Umiejętność nr. 1:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' required />
 				<p lang="en">Maximum 20 characters.</p>
-				<p lang="pl">Maximum 20 znaków.</p>
+				<p lang="pl">Maksimum 20 znaków.</p>
 			</div>
 			<div class='form__skills--input'>
 				<label lang="en">Skill nr. 2:</label>
 				<label lang="pl">Umiejętność nr. 2:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
-				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
+				<p lang="pl">Maksimum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 			<div class='form__skills--input'>
 				<label lang="en">Skill nr. 3:</label>
 				<label lang="pl">Umiejętność nr. 3:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
-				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
+				<p lang="pl">Maksimum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 			<div class='form__skills--input'>
 				<label lang="en">Skill nr. 4:</label>
 				<label lang="pl">Umiejętność nr. 4:</label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" class='hobby' type="text" name='skills' maxlength='20' />
 				<p lang="en">Maximum 20 characters. Leave it empty to skip. </p>
-				<p lang="pl">Maximum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
+				<p lang="pl">Maksimum 20 znaków. Zostaw puste miejsce, aby pominąć to pole.</p>
 			</div>
 		</div>
 
@@ -245,58 +245,58 @@
 				<h1 lang="pl">Praca nr. 1</h1>
 				<label lang="en">Position: </label>
 				<label lang="pl">Stanowisko: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-1' maxlength='25' required/>
-				<p lang="en">Please enter your job function. Maximum 25 characters.</p>
-				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 25 znaków.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-1' maxlength='30' required/>
+				<p lang="en">Please enter your job function. Maximum 30 characters.</p>
+				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 30 znaków.</p>
 				<label lang="en">Company: </label>
 				<label lang="pl">Firma: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-1' maxlength='35' required/>
-				<p lang="en">Name and localization of company you were working for. Maximum 35 characters.</p>
-				<p lang="pl">Nazwa firmy i jej lokalizacja. Maximum 35 znaków.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-1' maxlength='40' required/>
+				<p lang="en">Name and localization of company you were working for. Maximum 40 characters.</p>
+				<p lang="pl">Nazwa firmy i jej lokalizacja. Maximum 40 znaków.</p>
 				<label lang="en">Describe your job: </label>
 				<label lang="pl">Opisz swoją pracę: </label>
-				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-1' minlength='50' maxlength='200' required></textarea>
-				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
-				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maximum 200 znaków.</p>
+				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-1' minlength='50' maxlength='250' required></textarea>
+				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 250 characters.</p>
+				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maksimum 250 znaków.</p>
 				<label lang="en">When did you START working: </label>
 				<label lang="pl">Kiedy rozpocząłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='start-1' maxlength='14' required/>
 				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
-				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maximum 14 znaków.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maksimum 14 znaków.</p>
 				<label lang="en">When did you STOP working: </label>
 				<label lang="pl">Kiedy zakończyłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='stop-1' maxlength='14' required/>
 				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
-				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maximum 14 znaków.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maksimum 14 znaków.</p>
 			</div>
 			<div class='form__work--input'>
 				<h1 lang="en">Job nr. 2</h1>
 				<h1 lang="pl">Praca nr. 2</h1>
 				<label lang="en">Position: </label>
 				<label lang="pl">Stanowisko: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-2' maxlength='25' required/>
-				<p lang="en">Please enter your job function. Maximum 25 characters.</p>		
-				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 25 znaków.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='position-2' maxlength='30' required/>
+				<p lang="en">Please enter your job function. Maximum 30 characters.</p>		
+				<p lang="pl">Proszę opisz swoje stanowisko pracy, np: Kontroler Jakości Produktu. Maximum 30 znaków.</p>
 				<label lang="en">Company: </label>
 				<label lang="pl">Firma: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-2' maxlength='35' required/>
-				<p lang="en">Name and localization of company you were working for. Maximum 35 characters.</p>
-				<p lang="pl">Nazwa firmy i jej lokalizacja. Maximum 35 znaków.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='company-2' maxlength='40' required/>
+				<p lang="en">Name and localization of company you were working for. Maximum 40 characters.</p>
+				<p lang="pl">Nazwa firmy i jej lokalizacja. Maksimum 40 znaków.</p>
 				<label lang="en">Describe your job: </label>
 				<label lang="pl">Opisz swoją pracę: </label>
-				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-2' minlength='50' maxlength='200' required></textarea>
-				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 200 characters.</p>
-				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maximum 200 znaków.</p>
+				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='description-2' minlength='50' maxlength='250' required></textarea>
+				<p lang="en">Please add a decription of your position, what were your responsibilities. Also consider including information about your biggest accomplishments. Maximum 250 characters.</p>
+				<p lang="pl">Proszę dodać opis swojej pracy, zakres obowiązków, zasługi, uznania. Maksimum 250 znaków.</p>
 				<label lang="en">When did you START working: </label>
 				<label lang="pl">Kiedy rozpocząłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='start-2' maxlength='14' required/>
 				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
-				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maximum 14 znaków.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014". Maksimum 14 znaków.</p>
 				<label lang="en">When did you STOP working: </label>
 				<label lang="pl">Kiedy zakończyłeś pracę: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='stop-2' maxlength='14' required/>
 				<p lang="en">Please enter date, for example "Deceber 2012". Maximum 14 characters.</p>
-				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maximum 14 znaków.</p>
+				<p lang="pl">Podaj datę, np: "Grudzień 2014" lub "Aktualnie". Maksimum 14 znaków.</p>
 			</div>
 		</div>
 
@@ -307,17 +307,17 @@
 			<span lang="pl">Proszę wypełnij informację o swoich dwóch ostatnich szkołach.</span>
 			<div class='form__education--input'>
 				<h1 lang="en">School nr. 1</h1>
-				<h1 lang="pl">Szkoła nr. 1</h1>
+				<h1 lang="pl">Szkola nr. 1</h1>
 				<label lang="en">Profile: </label>
 				<label lang="pl">Profil: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='25' id='profile-1' required/>
-				<p lang="en">Please enter profile of your class. Maximum 25 characters.</p>
-				<p lang="pl">Proszę podaj profil uczęszczanego kierunku/klasy. Maksimum 25 znaków</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='30' id='profile-1' required/>
+				<p lang="en">Please enter profile of your class. Maximum 30 characters.</p>
+				<p lang="pl">Proszę podaj profil uczęszczanego kierunku/klasy. Maksimum 30 znaków</p>
 				<label lang="en">School/Univeristy name: </label>
 				<label lang="pl">Nazwa Szkoły: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='35' id='school-1' required/>
-				<p lang="en">Name and localization of school where you were taking classes. Maximum 35 characters.</p>
-				<p lang="pl">Nazwa i lokalizacja szkoły. Maksimum 35 characters.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='40' id='school-1' required/>
+				<p lang="en">Name and localization of school where you were taking classes. Maximum 40 characters.</p>
+				<p lang="pl">Nazwa i lokalizacja szkoły. Maksimum 40 characters.</p>
 				<label lang="en">Diplomas/Accomplishments: </label>
 				<label lang="pl">Dyplomy: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='school-description-1'  maxlength='50' required />
@@ -336,17 +336,17 @@
 			</div>
 			<div class='form__education--input'>
 				<h1 lang="en">School nr. 2</h1>
-				<h1 lang="pl">Szkoła nr. 2</h1>
+				<h1 lang="pl">Szkola nr. 2</h1>
 				<label lang="en">Profile: </label>
 				<label lang="pl">Profil: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='25' id='profile-2' required/>
-				<p lang="en">Please enter profile of your class. Maximum 25 characters.</p>
-				<p lang="pl">Proszę podaj profil uczęszczanego kierunku/klasy. Maksimum 25 znaków</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='30' id='profile-2' required/>
+				<p lang="en">Please enter profile of your class. Maximum 30 characters.</p>
+				<p lang="pl">Proszę podaj profil uczęszczanego kierunku/klasy. Maksimum 30 znaków</p>
 				<label lang="en">School/Univeristy name: </label>
 				<label lang="pl">Nazwa Szkoły: </label>
-				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='35' id='school-2' required/>
-				<p lang="en">Name and localization of school where you were taking classes. Maximum 35 characters.</p>
-				<p lang="pl">Nazwa i lokalizacja szkoły. Maksimum 35 characters.</p>
+				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='education' maxlength='40' id='school-2' required/>
+				<p lang="en">Name and localization of school where you were taking classes. Maximum 40 characters.</p>
+				<p lang="pl">Nazwa i lokalizacja szkoły. Maksimum 40 characters.</p>
 				<label lang="en">Diplomas/Accomplishments: </label>
 				<label lang="pl">Dyplomy: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='work' id='school-description-2'  maxlength='50' required />
