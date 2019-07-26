@@ -21,14 +21,24 @@
 				<p lang="en">Sections:</p>
 				<p lang="pl">Sekcje:</p>
 			</div>
+
 		</div>
-		<div class="mainNav__language">
-			<div onClick="switchLanguage('en')" name='language__photo' class="mainNav__language--icon" >
+		<div class="mainNav__right">
+			<form class="mainNav__right--donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick" />
+				<input type="hidden" name="hosted_button_id" value="U4HJ8FXJLJF24" />
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+			</form>
+			<div onClick="openInstructions()" class="mainNav__right--how" >
+				<span lang='en'>How to use?</span>
+				<span lang='pl'>Instrukcja</span>
+			</div>
+			<div onClick="switchLanguage('en')" name='language__photo' class="mainNav__right--icon" >
 				<svg>
 					<use xlink:href="/images/sprite.svg#uk"></use>
 				</svg>
 			</div>
-			<div onClick="switchLanguage('pl')" name='language__photo' class="mainNav__language--icon">
+			<div onClick="switchLanguage('pl')" name='language__photo' class="mainNav__right--icon">
 				<svg>
 					<use xlink:href="/images/sprite.svg#poland"></use>
 				</svg>
@@ -95,8 +105,8 @@
 			<div class='form__photo--input'>
 				<label for='file'><i class="fas fa-upload"></i></label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="file" name='uploadImage' id='file' onChange='addPhoto()' required/>
-				<p lang="en">Choose a file to upload. Allowed formats: JPG, JPEG, PNG.</p>
-				<p lang="pl">Wybierz plik. Dozwolone formaty: JPG, JPEG, PNG.</p>
+				<p lang="en">Choose a file to upload. Allowed formats: JPG, JPEG, PNG. Required.</p>
+				<p lang="pl">Wybierz plik. Dozwolone formaty: JPG, JPEG, PNG. Wymagane.</p>
 			</div>
 			<p id='photo--info'></p>
 			<div class='form__photo--outputBox'>
@@ -112,22 +122,22 @@
 				<label lang="en">Name: </label>
 				<label lang="pl">Imię: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='name' maxlength='19' required/>
-				<p lang="en">Please enter your name. Maximum 19 characters.</p>
-				<p lang="pl">Proszę podać imię i nazwisko. Maksimum 19 znaków.</p>
+				<p lang="en">Please enter your name. Maximum 19 characters. Required.</p>
+				<p lang="pl">Proszę podać imię i nazwisko. Maksimum 19 znaków. Wymagane.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Email: </label>
 				<label lang="pl">Email: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="email" name='email' maxlength='25' required/>
-				<p lang="en">Please enter your email address. Maximum 25 characters.</p>
-				<p lang="pl">Proszę podać adres email. Maksimum 25 znaków.</p>
+				<p lang="en">Please enter your email address. Maximum 25 characters. Required.</p>
+				<p lang="pl">Proszę podać adres email. Maksimum 25 znaków. Wymagane.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Phone: </label>
 				<label lang="pl">Telefon: </label>
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="tel" name='phone' maxlength='20' required/>
-				<p lang="en">Please enter your phone number. Maximum 20 characters.</p>
-				<p lang="pl">Proszę podać numer telefonu. Maksimum 20 znaków.</p>
+				<p lang="en">Please enter your phone number. Maximum 20 characters. Required.</p>
+				<p lang="pl">Proszę podać numer telefonu. Maksimum 20 znaków. Wymagane.</p>
 			</div>
 			<div class='form__contact--input'>
 				<label lang="en">Address: </label>
@@ -135,8 +145,8 @@
 				<input onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='address' maxlength='25' required/>
 				<p lang="en">Please fill in city and/or country you live in.</p>
 				<p lang="pl">Proszę podać miasto i/lub kraj zamieszkania.</p>
-				<p lang="en">Example: "Houston, United States". Maximum 25 characters.</p>
-				<p lang="pl">Na przykład: "Gdynia, Polska". Maksimum 25 znaków.</p>
+				<p lang="en">Example: "Houston, United States". Maximum 25 characters. Required.</p>
+				<p lang="pl">Na przykład: "Gdynia, Polska". Maksimum 25 znaków. Wymagane.</p>
 			</div>
 		</div>
 
@@ -147,8 +157,8 @@
 				<label lang="en">Describe yourself:</label>
 				<label lang="pl">Opisz własną osobę:</label>
 				<textarea onkeyup="validateInput(event)" onkeypress="validateInput(event)" type="text" name='about' minlength='250' maxlength='420' required></textarea>
-				<p lang="en">Please describe your person. From 250 to 420 characters.</p>
-				<p lang="pl">Proszę opisz własną osobę. Od 250 do 420 znaków.</p>
+				<p lang="en">Please describe your person. From 250 to 420 characters. Required.</p>
+				<p lang="pl">Proszę opisz własną osobę. Od 250 do 420 znaków. Wymagane.</p>
 			</div>
 		</div>
 
@@ -234,11 +244,11 @@
 			<h3 lang="pl" class='form__work--header'>Sekcja Doświadczenie Zawodowe</h3>
 			<span lang="en">
 				Please fill in your last (or most important) two job positions. 
-				If you don't have a lot of work experience, you had only one job or didn't have any, please consider including any other job-like activities, for example volunteering, important school projects etc.
+				If you don't have a lot of work experience, you had only one job or didn't have any, please consider including any other job-like activities, for example volunteering, important school projects etc. All fields required.
 			</span>
 			<span lang="pl">
 				Proszę uzupełnij swoje dwie ostatnie (lub najważniejsze) stanowiska pracy.
-				Jeżeli nie masz dużego dośwaidczenia zawodowego, albo zajmowałeś do tej pory tylko jedno stanowisko pracy, rozważ uzupełnienie swojego doświadczenia o pokrewne aktywności, takie jak: wolontariat, czy ważne szkolne projekty.
+				Jeżeli nie masz dużego dośwaidczenia zawodowego, albo zajmowałeś do tej pory tylko jedno stanowisko pracy, rozważ uzupełnienie swojego doświadczenia o pokrewne aktywności, takie jak: wolontariat, czy ważne szkolne projekty. Wszystkie pola wymagane.
 			</span>
 			<div class='form__work--input'>
 				<h1 lang="en">Job nr. 1</h1>
@@ -303,8 +313,8 @@
 		<div class='form__education section' id="section__education">
 			<h3 lang="en" class='form__education--header'>Section Education</h3>
 			<h3 lang="pl" class='form__education--header'>Sekcja Edukacja</h3>
-			<span lang="en">Please fill in your last two (graduated) schools/universities.</span>
-			<span lang="pl">Proszę wypełnij informację o swoich dwóch ostatnich szkołach.</span>
+			<span lang="en">Please fill in your last two (graduated) schools/universities. All fields required.</span>
+			<span lang="pl">Proszę wypełnij informację o swoich dwóch ostatnich szkołach. Wszystkie pola wymagane.</span>
 			<div class='form__education--input'>
 				<h1 lang="en">School nr. 1</h1>
 				<h1 lang="pl">Szkola nr. 1</h1>
@@ -422,6 +432,39 @@
 		</h1>
 		<h3>We are proceeding your request.</h3>
 		<h3>This may take up to 1 minute.</h3>
+	</div>
+	<div class='instructions' style="display:none">
+		<div class='instructions__close' onClick='closeInstructions()'>
+			<i class="fas fa-times-circle"></i>
+		</div>
+		<header class='instructions__header'>
+			<h1 lang='en'>How to use our website</h1>
+			<h1 lang='pl'>Instrukcja korzystania ze strony</h1>
+		</header>
+		<main class='instructions__main'>
+			<ul class="instructions__main--list">
+				<li class="instructions__main--list-item">
+					<div lang='en'>Step 1</div>
+					<p lang='en'>Fill in the form with all required informations (including photo). Read and follow descriptions attached to each section (purple background color) and under each field (red text color). You can navigate to each section from above navigation menu. This informations will be used to fill in the resume template only once at time. We do not store any given information nor share it with any other companies/services.</p>
+					<div lang='pl'>Krok 1</div>
+					<p lang='pl'>Wypełnij wszystkie wymagane pola formularza (włącznie ze zdjęciem). Przeczytaj i zastosuj się do opisów każdej sekcji (fioletowe tło) i pod każdym polem (czerwony tekst). Możesz poruszać się do dowolnej sekcji nawigując z górnego menu. Podane informacje zostaną użyte jednorazowo do wypełnienia szablonu CV. Nie przechowujemy w żaden sposób jakichkolwiek informacji podanych w formularzu, nie przekazujemy ich żadnym innym przedsiębiorstwom czy serwisom.</p>
+				</li>
+				<li class="instructions__main--list-item">
+					<div lang='en'>Step 2</div>
+					<p lang='en'>Click the big blue button "Create resume". It's located below the last "Courses" section. Wait until your resume is downloaded. The resume is in pdf format</p>
+					<div lang='pl'>Krok 2</div>
+					<p lang='pl'>Kliknij duży niebieski przycisk "Utwórz CV". Przycisk znajduje się pod ostatnią sekcją "Kursy". Czekaj aż twoje CV się pobierze. Cv jest w formacie pdf.</p>
+				</li>
+				<li class="instructions__main--list-item">
+					<div lang='en'>Step 3</div>
+					<p lang='en'>If you like your new resume, you can donate us by clicking 'Donate' Pay-pal button. Using our website is free of charge so donation is 'free will'. Thank you for using our services!</p>
+					<div lang='pl'>Krok 3</div>
+					<p lang='pl'>Jeżeli podoba Ci się Twoje nowe CV, możesz, z dobrej woli, zasilić nasz budżet, abyśmy mogli w przyszłości ulepszyć naszą usługę. Kliknij przycisk 'Donate' Pay-pal. Dziękujemy za skorzystanie z naszego serwisu!</p>
+				</li>
+				<li class="instructions__main--list-item"></li>
+			</ul>
+			
+		</main>
 	</div>
 
 	<script src='/scripts/script.js'></script>

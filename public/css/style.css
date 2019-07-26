@@ -6,6 +6,12 @@
     opacity: 1;
     visibility: visible; } }
 
+@keyframes comeLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0%); } }
+
 ::-webkit-scrollbar {
   display: none; }
 
@@ -81,19 +87,37 @@ body {
         @media only screen and (max-width: 37.5em) {
           .mainNav__left--section p {
             font-size: 1.6rem; } }
-  .mainNav__language {
+  .mainNav__right {
     padding: 0 1rem;
-    min-height: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-self: end; }
-    .mainNav__language--icon svg {
+    .mainNav__right--donate {
+      margin: 0 1rem; }
+    .mainNav__right--how {
+      min-height: 100%;
+      background-color: #AF040F;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      cursor: pointer; }
+      .mainNav__right--how span {
+        color: white;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.8rem; }
+        .mainNav__right--how span include respond(l) {
+          font-size: 1.7rem; }
+        @media only screen and (max-width: 37.5em) {
+          .mainNav__right--how span {
+            font-size: 1.6rem; } }
+    .mainNav__right--icon svg {
       width: 4rem;
       height: 2.3rem;
       cursor: pointer;
       transition: transform .2s; }
-      .mainNav__language--icon svg:hover {
+      .mainNav__right--icon svg:hover {
         transform: scale(1.1); }
 
 .nav {
@@ -107,7 +131,7 @@ body {
   position: fixed;
   top: 4rem;
   left: 0;
-  z-index: 10; }
+  z-index: 9; }
   .nav__section {
     flex: 1;
     transition: all .2s;
@@ -880,3 +904,65 @@ body {
     animation: pulsate .5s .2s infinite linear; }
   .loading__pulsate-3 {
     animation: pulsate .5s .4s infinite linear; }
+
+.instructions {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-image: linear-gradient(to bottom, #00171F, #003459);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  animation: comeLeft .2s linear;
+  overflow-y: scroll; }
+  .instructions__close {
+    position: absolute;
+    top: 6rem;
+    right: 1rem;
+    font-size: 4rem;
+    color: #AF040F;
+    cursor: pointer; }
+    @media only screen and (max-width: 37.5em) {
+      .instructions__close {
+        font-size: 2.5rem; } }
+  .instructions__header {
+    margin-top: 10rem; }
+    .instructions__header h1 {
+      font-family: "Rajdhani", sans-serif;
+      font-size: 4rem;
+      text-align: center;
+      letter-spacing: .3rem;
+      color: #AF040F;
+      text-transform: uppercase;
+      text-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 62.5em) {
+        .instructions__header h1 {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .instructions__header h1 {
+          font-size: 2.2rem; } }
+  .instructions__main {
+    margin: 1rem;
+    display: flex;
+    justify-content: center; }
+    .instructions__main--list-item div {
+      display: inline-block;
+      margin: 1rem;
+      padding: .5rem 2rem;
+      border-radius: 3px;
+      background-color: #590034;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 2.5rem;
+      color: white; }
+      @media only screen and (max-width: 37.5em) {
+        .instructions__main--list-item div {
+          font-size: 1.8rem; } }
+    .instructions__main--list-item p {
+      margin: 2rem;
+      font-family: "Courier New", sans-serif;
+      font-size: 1.8rem;
+      color: white; }
+      @media only screen and (max-width: 37.5em) {
+        .instructions__main--list-item p {
+          font-size: 1.5rem; } }

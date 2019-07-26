@@ -262,6 +262,7 @@ const scrollToSection = (event) =>{
 }
 
 const goHome = ()=>{
+	closeInstructions()
 	return document.querySelector(".header").scrollIntoView({behavior:"smooth"})
 }
 
@@ -364,7 +365,7 @@ const switchLanguage = (lang) =>{
 	})
 	
 }
-switchLanguage("en")
+switchLanguage(navigator.language==="pl"||navigator.language==="pl-PL" ? "pl" : "en")
 
 //display loading block while creating a pdf file
 
@@ -377,4 +378,14 @@ const switchDisplayLoading = () =>{
 	}else{
 		loadingBlock.style.display="flex"
 	}
+}
+
+//open and close instructions functions
+
+const openInstructions = () =>{
+	return document.querySelector('.instructions').style.display="block"
+}
+
+const closeInstructions = () =>{
+	return document.querySelector('.instructions').style.display="none"
 }
