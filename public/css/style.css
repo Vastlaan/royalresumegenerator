@@ -95,14 +95,39 @@ body {
     align-items: center;
     justify-self: end; }
     .mainNav__right--donate {
-      margin: 0 1rem; }
+      margin: 0 1rem;
+      position: relative; }
+      .mainNav__right--donate::after {
+        display: block;
+        content: "Donate us";
+        cursor: pointer;
+        position: absolute;
+        top: .4rem;
+        left: 0;
+        width: 10rem;
+        font-family: "Rajdhani", sans-serif;
+        font-size: 1.8rem;
+        text-align: center;
+        background-color: green;
+        border-radius: 3px;
+        box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        color: white;
+        z-index: 11; }
+      .mainNav__right--donate-btn {
+        width: 10rem;
+        font-family: "Rajdhani", sans-serif;
+        opacity: 0;
+        z-index: 12;
+        position: relative; }
     .mainNav__right--how {
-      min-height: 100%;
-      background-color: #AF040F;
+      background-color: #590034;
       display: flex;
       align-items: center;
       padding: 0 2rem;
-      cursor: pointer; }
+      border-radius: 3px;
+      cursor: pointer;
+      box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3); }
       .mainNav__right--how span {
         color: white;
         font-family: "Rajdhani", sans-serif;

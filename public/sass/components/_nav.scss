@@ -59,15 +59,46 @@
 
 		&--donate{
 			margin:0 1rem;
+			position:relative;
+
+			&::after{
+				display:block;
+				content:"Donate us";
+				cursor:pointer;
+				position:absolute;
+				top:.4rem;
+				left:0;
+				width:10rem;
+				font-family: $font-rajdhani;
+				font-size: 1.8rem;
+				text-align: center;
+				background-color: green;
+				border-radius: 3px;
+				box-shadow: 0 .2rem .3rem rgba(0,0,0,.3);
+				cursor:pointer;
+				color:white;
+				z-index: 11;
+			}
+			
+			&-btn{
+				width:10rem;
+				font-family: $font-rajdhani;
+				opacity:0;
+				z-index: 12;
+				position:relative;
+			}
+
 		}
 
 		&--how{
-			min-height:100%;
-			background-color: $color-red;
+			
+			background-color: $color-purple;
 			display:flex;
 			align-items: center;
 			padding:0 2rem;
+			border-radius: 3px;
 			cursor:pointer;
+			box-shadow: 0 .2rem .3rem rgba(0,0,0,.3);
 
 			span{
 				color:white;
