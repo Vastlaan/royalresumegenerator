@@ -26,6 +26,39 @@
 
 	}
 
+	&__legal{
+
+		display:flex;
+		justify-content: center;
+
+		&--link{
+			
+			width:15rem;
+			border:1px solid $color-grey-light;
+			border-radius: 3px;
+			padding:.2rem 2rem;
+			margin:0 1rem 1rem 1rem;
+			color: white;
+			font-family: $font-rajdhani;
+			font-size: 1.3rem;
+			cursor:pointer;
+			transition:all .2s;
+			text-align: center;
+
+			&:hover{
+				border: 1px solid transparent;
+				background-color: $color-grey-light;
+				color:black;
+			}
+
+			p{
+				display:block;
+				
+
+			}
+		}
+	}
+
 	&__credits{
 		color:$color-grey-light;
 		font-family: "Courier New", sans-serif;

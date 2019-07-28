@@ -12,6 +12,12 @@
   100% {
     transform: translateX(0%); } }
 
+@keyframes comeOut {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 ::-webkit-scrollbar {
   display: none; }
 
@@ -929,6 +935,27 @@ body {
       transition: transform .2s; }
       .footer__copy a:hover {
         transform: scale(1.1) rotate(3deg); }
+  .footer__legal {
+    display: flex;
+    justify-content: center; }
+    .footer__legal--link {
+      width: 15rem;
+      border: 1px solid #d3d3d3;
+      border-radius: 3px;
+      padding: .2rem 2rem;
+      margin: 0 1rem 1rem 1rem;
+      color: white;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all .2s;
+      text-align: center; }
+      .footer__legal--link:hover {
+        border: 1px solid transparent;
+        background-color: #d3d3d3;
+        color: black; }
+      .footer__legal--link p {
+        display: block; }
   .footer__credits {
     color: #d3d3d3;
     font-family: "Courier New", sans-serif;
@@ -1070,3 +1097,84 @@ body {
       @media only screen and (max-width: 37.5em) {
         .instructions__main--list-item p {
           font-size: 1.5rem; } }
+
+.license {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  animation: comeOut .2s linear; }
+  .license__close {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: #10A2BD;
+    font-size: 4rem;
+    cursor: pointer; }
+  .license p {
+    display: block;
+    width: 75%;
+    background-image: linear-gradient(to bottom, #003459, #00171F);
+    border-radius: 5px;
+    color: #d3d3d3;
+    padding: 2rem 5rem;
+    font-family: "Courier New", sans-serif;
+    font-size: 1.8rem; }
+    .license p span {
+      display: block;
+      font-size: 2.2rem;
+      margin: 1rem;
+      color: white;
+      text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .license p {
+        width: 100%; } }
+
+.privacy {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  animation: comeOut .2s linear;
+  overflow-y: scroll; }
+  .privacy__close {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    color: #10A2BD;
+    font-size: 4rem;
+    cursor: pointer; }
+  .privacy__box {
+    display: block;
+    width: 75%;
+    max-height: 100%;
+    background-image: linear-gradient(to bottom, #003459, #00171F);
+    border-radius: 5px;
+    color: white;
+    padding: 2rem 5rem;
+    overflow-y: scroll; }
+    .privacy__box h1, .privacy__box h2 {
+      font-family: "Courier New", sans-serif;
+      font-size: 2.2rem;
+      color: white;
+      text-align: center;
+      margin: 1rem; }
+    .privacy__box p {
+      font-family: "Courier New", sans-serif;
+      font-size: 1.8rem;
+      color: #d3d3d3; }
+    @media only screen and (max-width: 37.5em) {
+      .privacy__box {
+        width: 100%; } }

@@ -1,0 +1,96 @@
+.license{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,.9);
+	z-index: 99;
+	animation: comeOut .2s linear;
+
+	&__close{
+		position:absolute;
+		top:2rem;
+		right:1rem;
+		color:$color-blue-light;
+		font-size: 4rem;
+		cursor:pointer;
+	}
+	p{
+
+		span{
+			display:block;
+			font-size: 2.2rem;
+			margin: 1rem;
+			color:white;
+			text-align: center;
+		}
+		display:block;
+		width:75%;
+		background-image: linear-gradient(to bottom, $color-blue, $color-blue-dark);
+		border-radius: 5px;
+		color:$color-grey-light;
+		padding:2rem 5rem;
+		font-family: "Courier New", sans-serif;
+		font-size: 1.8rem;
+
+
+		@include respond(s){
+			width:100%;
+		}
+	}
+}
+
+.privacy{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,.9);
+	z-index: 99;
+	animation: comeOut .2s linear;
+	overflow-y:scroll;
+
+	&__close{
+		position:absolute;
+		top:2rem;
+		right:1rem;
+		color:$color-blue-light;
+		font-size: 4rem;
+		cursor:pointer;
+	}
+	&__box{
+		display:block;
+		width:75%;
+		max-height:100%;
+		background-image: linear-gradient(to bottom, $color-blue, $color-blue-dark);
+		border-radius: 5px;
+		color:white;
+		padding:2rem 5rem;
+		overflow-y:scroll;
+		h1, h2{
+			font-family: "Courier New", sans-serif;
+			font-size: 2.2rem;
+			color:white;
+			text-align: center;
+			margin: 1rem;
+		}
+		p{
+			font-family: "Courier New", sans-serif;
+			font-size: 1.8rem;
+			color:$color-grey-light;
+		}
+
+
+		@include respond(s){
+			width:100%;
+		}
+	}
+}

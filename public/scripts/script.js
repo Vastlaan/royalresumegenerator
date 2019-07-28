@@ -389,3 +389,21 @@ const openInstructions = () =>{
 const closeInstructions = () =>{
 	return document.querySelector('.instructions').style.display="none"
 }
+
+//open and close license
+
+const displayLicense = () =>{
+	return document.querySelector(".license").style.display="flex"
+}
+const closeLicense = () =>{
+	return document.querySelector(".license").style.display="none"
+}
+
+//open and close privacy
+
+const displayPrivacy = () =>{
+	return document.querySelector(".privacy").style.display="flex"
+}
+const closePrivacy = () =>{
+	return document.querySelector(".privacy").style.display="none"
+}
