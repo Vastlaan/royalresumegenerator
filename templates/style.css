@@ -158,7 +158,7 @@ color: #5BC9E4; }
   align-items: center;
   margin: 1rem 0; }
   .lang1__strip {
-    flex: 0 0 70%;
+    flex: 0 0 65%;
     height: 8px;
     background-color: white;
     border-radius: 3px;
@@ -174,7 +174,7 @@ color: #5BC9E4; }
       border-radius: 5px;
       background-color: #E45B84; }
   .lang1__text {
-    flex: 0 0 30%;
+    flex: 0 0 35%;
     padding-left: 1rem; }
 
 .lang2 {
