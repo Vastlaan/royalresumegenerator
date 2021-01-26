@@ -1,195 +1,187 @@
-.mainNav{
-	position:fixed;
-	top:0;
-	left:0;
-	height:4rem;
-	width:100%;
-	display:flex;
-	align-items: center;
-	justify-content: space-between;
-	background-color: $color-blue-light;
-	z-index: 10;
+.mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-blue-light;
+    z-index: 10;
 
-	&__left{
-		color:white;
-		display:flex;
-		justify-content: center;
-		align-items: center;
-		height:100%;
-		&--i{
-			padding:1rem;
-			display: block;
-			font-size: 2.5rem;
-			color:$color-red;
-			cursor:pointer;	
-			transition:all .2s;
+    &__left {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &--i {
+            padding: 1rem;
+            display: block;
+            font-size: 2.5rem;
+            color: $color-red;
+            cursor: pointer;
+            transition: all 0.2s;
 
-			&:hover{
-				background-color:$color-red;
-				color:white;
-			}
-		}
-		&--section{
-			min-height:100%;
-			background-color: $color-blue;
-			display:flex;
-			align-items: center;
-			padding:0 2rem;
+            &:hover {
+                background-color: $color-red;
+                color: white;
+            }
+        }
+        &--section {
+            min-height: 100%;
+            background-color: $color-blue;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
 
-			p{
-				display:block;
-				color:white;
-				font-family: $font-rajdhani;
-				font-size: 1.8rem;
-				include respond(l){
-					font-size: 1.7rem;
-				}
-				@include respond(s){
-					font-size: 1.6rem;
-				}
-				
-			}
-		}
-	}
-	&__right{
-		padding:0 1rem;
-		height:100%;
-		display:flex;
-		justify-content: space-between;
-		align-items: center;
-		justify-self: end;
+            p {
+                display: block;
+                color: white;
+                font-family: $font-rajdhani;
+                font-size: 1.8rem;
+                @include respond(l) {
+                    font-size: 1.7rem;
+                }
+                @include respond(s) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &__right {
+        padding: 0 1rem;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-self: end;
 
-		&--donate{
-			margin:0 1rem;
-			position:relative;
-			&:hover{
+        &--donate {
+            margin: 0 1rem;
+            position: relative;
+            &:hover {
+                &::after {
+                    background-color: darken(green, 5%);
+                }
+            }
 
-				&::after{
-					background-color: darken(green,5%);
-				}
-				
-			}
+            &::after {
+                display: block;
+                content: "Donate us";
+                cursor: pointer;
+                position: absolute;
+                top: 0.4rem;
+                left: 0;
+                width: 10rem;
+                font-family: $font-rajdhani;
+                font-size: 1.8rem;
+                text-align: center;
+                background-color: green;
+                border-radius: 3px;
+                box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                color: white;
+                z-index: 11;
+            }
 
-			&::after{
-				display:block;
-				content:"Donate us";
-				cursor:pointer;
-				position:absolute;
-				top:.4rem;
-				left:0;
-				width:10rem;
-				font-family: $font-rajdhani;
-				font-size: 1.8rem;
-				text-align: center;
-				background-color: green;
-				border-radius: 3px;
-				box-shadow: 0 .2rem .3rem rgba(0,0,0,.3);
-				cursor:pointer;
-				color:white;
-				z-index: 11;
-			}
-			
-			&-btn{
-				width:10rem;
-				font-family: $font-rajdhani;
-				opacity:0;
-				z-index: 12;
-				position:relative;
-			}
+            &-btn {
+                width: 10rem;
+                font-family: $font-rajdhani;
+                opacity: 0;
+                z-index: 12;
+                position: relative;
+            }
+        }
 
-		}
+        &--how {
+            background-color: $color-purple;
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            border-radius: 3px;
+            cursor: pointer;
+            box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
+            transition: background-color 0.2s;
 
-		&--how{
-			
-			background-color: $color-purple;
-			display:flex;
-			align-items: center;
-			padding:0 2rem;
-			border-radius: 3px;
-			cursor:pointer;
-			box-shadow: 0 .2rem .3rem rgba(0,0,0,.3);
-			transition:background-color .2s;
+            &:hover {
+                background-color: darken($color-red, 5%);
+            }
 
-			&:hover{
-				background-color: darken($color-red,5%);
-			}
+            span {
+                color: white;
+                font-family: $font-rajdhani;
+                font-size: 1.8rem;
+                @include respond(l) {
+                    font-size: 1.7rem;
+                }
+                @include respond(s) {
+                    font-size: 1.6rem;
+                }
+            }
+        }
 
-			span{
-				color:white;
-				font-family: $font-rajdhani;
-				font-size: 1.8rem;
-				include respond(l){
-					font-size: 1.7rem;
-				}
-				@include respond(s){
-					font-size: 1.6rem;
-				}
-
-			}
-		}
-
-		&--icon{
-			svg{
-				width:4rem;
-				height:2.3rem;
-				cursor:pointer;
-				transition:transform .2s;
-				&:hover{
-					transform:scale(1.1);
-				}
-			}
-		}
-
-
-	}
+        &--icon {
+            svg {
+                width: 4rem;
+                height: 2.3rem;
+                cursor: pointer;
+                transition: transform 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
 }
 
-.nav{
-	width:100%;
-	background-color: $color-blue;
-	height:5rem;
-	display:flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	
-	position:fixed;
-	top:4rem;
-	left:0;
-	z-index: 9;
+.nav {
+    width: 100%;
+    background-color: $color-blue;
+    height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 
-	&__section{
-		flex:1;
-		transition:all .2s;
-		padding:0 2rem;
-		min-height:100%;
-		display:flex;
-		justify-content: center;
-		align-items: center;
-		@include respond(l){
-			padding:0 1rem;
-		}
-		@include respond(xs){
-			padding:0 .5rem;
-		}
-		&:hover{
-			background-color: $color-purple;
-		}
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    z-index: 9;
 
-		&--btn{
-			display:block;
-			min-height:100%;
-			text-decoration: none;
-			color:white;
-			font-family: $font-rajdhani;
-			font-size: 1.8rem;
-			cursor:pointer;
-			@include respond(l){
-				font-size: 1.7rem;
-			}
-			@include respond(s){
-				font-size: 1.6rem;
-			}
-		}
-	}
+    &__section {
+        flex: 1;
+        transition: all 0.2s;
+        padding: 0 2rem;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include respond(l) {
+            padding: 0 1rem;
+        }
+        @include respond(xs) {
+            padding: 0 0.5rem;
+        }
+        &:hover {
+            background-color: $color-purple;
+        }
+
+        &--btn {
+            display: block;
+            min-height: 100%;
+            text-decoration: none;
+            color: white;
+            font-family: $font-rajdhani;
+            font-size: 1.8rem;
+            cursor: pointer;
+            @include respond(l) {
+                font-size: 1.7rem;
+            }
+            @include respond(s) {
+                font-size: 1.6rem;
+            }
+        }
+    }
 }

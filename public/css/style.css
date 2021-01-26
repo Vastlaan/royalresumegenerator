@@ -147,7 +147,7 @@ body {
       font-size: 2.5rem;
       color: #AF040F;
       cursor: pointer;
-      transition: all .2s; }
+      transition: all 0.2s; }
       .mainNav__left--i:hover {
         background-color: #AF040F;
         color: white; }
@@ -162,8 +162,9 @@ body {
         color: white;
         font-family: "Rajdhani", sans-serif;
         font-size: 1.8rem; }
-        .mainNav__left--section p include respond(l) {
-          font-size: 1.7rem; }
+        @media only screen and (max-width: 62.5em) {
+          .mainNav__left--section p {
+            font-size: 1.7rem; } }
         @media only screen and (max-width: 37.5em) {
           .mainNav__left--section p {
             font-size: 1.6rem; } }
@@ -184,7 +185,7 @@ body {
         content: "Donate us";
         cursor: pointer;
         position: absolute;
-        top: .4rem;
+        top: 0.4rem;
         left: 0;
         width: 10rem;
         font-family: "Rajdhani", sans-serif;
@@ -210,15 +211,16 @@ body {
       border-radius: 3px;
       cursor: pointer;
       box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.3);
-      transition: background-color .2s; }
+      transition: background-color 0.2s; }
       .mainNav__right--how:hover {
         background-color: #96030d; }
       .mainNav__right--how span {
         color: white;
         font-family: "Rajdhani", sans-serif;
         font-size: 1.8rem; }
-        .mainNav__right--how span include respond(l) {
-          font-size: 1.7rem; }
+        @media only screen and (max-width: 62.5em) {
+          .mainNav__right--how span {
+            font-size: 1.7rem; } }
         @media only screen and (max-width: 37.5em) {
           .mainNav__right--how span {
             font-size: 1.6rem; } }
@@ -226,7 +228,7 @@ body {
       width: 4rem;
       height: 2.3rem;
       cursor: pointer;
-      transition: transform .2s; }
+      transition: transform 0.2s; }
       .mainNav__right--icon svg:hover {
         transform: scale(1.1); }
 
@@ -244,7 +246,7 @@ body {
   z-index: 9; }
   .nav__section {
     flex: 1;
-    transition: all .2s;
+    transition: all 0.2s;
     padding: 0 2rem;
     min-height: 100%;
     display: flex;
@@ -255,7 +257,7 @@ body {
         padding: 0 1rem; } }
     @media only screen and (max-width: 26.3em) {
       .nav__section {
-        padding: 0 .5rem; } }
+        padding: 0 0.5rem; } }
     .nav__section:hover {
       background-color: #590034; }
     .nav__section--btn {
@@ -275,7 +277,8 @@ body {
 
 .header {
   width: 100%;
-  height: 80vh;
+  padding-top: 15rem;
+  padding-bottom: 5rem;
   background-color: #00171F;
   display: flex;
   flex-direction: column;
@@ -294,7 +297,7 @@ body {
     font-family: "Poiret One", cursive;
     font-size: 7rem;
     font-weight: 300;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
     color: white;
     text-align: center;
     text-transform: uppercase; }
@@ -321,22 +324,22 @@ body {
     width: 35%;
     cursor: pointer;
     z-index: 7;
-    transition: transform .2s; }
+    transition: transform 0.2s; }
     .examples__img--1 {
       transform: translate(40%, -10%);
       z-index: 8; }
       .examples__img--1:hover {
-        transform: translate(40%, -10%) scale(1.15); }
+        transform: translate(40%, -10%) scale(1.05); }
       @media only screen and (max-width: 26.3em) {
         .examples__img--1 {
           transform: translate(30%, -10%);
           width: 65%; }
           .examples__img--1:hover {
-            transform: scale(1.15) translate(25%, 0%); } }
+            transform: scale(1.05) translate(25%, 0%); } }
     .examples__img--2 {
       transform: translate(30%, 0); }
       .examples__img--2:hover {
-        transform: translate(30%, 0) scale(1.15);
+        transform: translate(30%, 0) scale(1.05);
         z-index: 9; }
       @media only screen and (max-width: 26.3em) {
         .examples__img--2 {
@@ -420,7 +423,8 @@ body {
         transform: translate(-50%, -50%);
         opacity: 0;
         cursor: pointer;
-        height: 5rem; }
+        height: 5rem;
+        padding: 1.4rem; }
       .form__photo--input p {
         display: block;
         width: 100%;
@@ -432,7 +436,7 @@ body {
         bottom: -6rem;
         left: 0; }
     .form__photo--outputBox {
-      width: calc((100vw*0.35)*0.8);
+      width: calc((100vw * 0.35) * 0.8);
       margin: 1rem auto;
       overflow: hidden;
       border: 1px solid rgba(0, 52, 89, 0.3);
@@ -479,7 +483,7 @@ body {
         text-align: center;
         display: inline-block;
         width: 60%;
-        padding: .5rem;
+        padding: 1.4rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__contact--input input:focus {
@@ -567,7 +571,7 @@ body {
       .form__lang--input-1 {
         display: inline-block;
         width: 50%;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
         margin: 1rem;
@@ -605,7 +609,7 @@ body {
       margin: 0 2rem; }
     .form__lang--btn {
       margin: 5rem auto 0 auto;
-      padding: .2rem 3rem;
+      padding: 0.2rem 3rem;
       background-color: #10A2BD;
       border-radius: 3px;
       font-family: "Rajdhani", sans-serif;
@@ -654,10 +658,11 @@ body {
         margin: auto; }
       .form__skills--input input {
         height: 4rem;
+        padding: 1.4rem;
         text-align: center;
         display: inline-block;
         width: 50%;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__skills--input input:focus {
@@ -732,7 +737,7 @@ body {
         display: block;
         width: 70%;
         margin: 0 auto;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__work--input input:focus {
@@ -743,7 +748,7 @@ body {
         width: 70%;
         height: 10rem;
         margin: 0 auto;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__work--input textarea:focus {
@@ -818,7 +823,7 @@ body {
         display: block;
         width: 70%;
         margin: 0 auto;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__education--input input:focus {
@@ -873,7 +878,7 @@ body {
         text-align: center;
         display: inline-block;
         width: 70%;
-        padding: .5rem;
+        padding: 0.5rem;
         border: 1px solid rgba(0, 52, 89, 0.3);
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); }
         .form__courses--input input:focus {
@@ -895,25 +900,19 @@ body {
     background-color: #003459;
     font-family: "Poiret One", cursive;
     font-size: 3rem;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     color: white;
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.3);
-    transition: all .2s; }
+    transition: all 0.2s; }
     @media only screen and (max-width: 37.5em) {
       .form__submit {
-        padding: .5rem 2.5rem;
+        padding: 0.5rem 2.5rem;
         width: 35rem; } }
     .form__submit:hover {
       transform: translateY(-0.2rem);
       box-shadow: 0 1.3rem 1rem rgba(0, 0, 0, 0.2); }
-
-#lang2 {
-  display: none; }
-
-#lang3 {
-  display: none; }
 
 .footer {
   width: 100%;

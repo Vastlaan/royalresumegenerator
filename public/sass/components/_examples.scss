@@ -1,59 +1,57 @@
-.examples{
-	width:100%;
-	padding:5rem 1rem;
-	background-image:linear-gradient(to bottom, $color-blue-dark,$color-blue-dark 10%, $color-blue-light 100%);
-	display:flex;
-	position:relative;
+.examples {
+    width: 100%;
+    padding: 5rem 1rem;
+    background-image: linear-gradient(
+        to bottom,
+        $color-blue-dark,
+        $color-blue-dark 10%,
+        $color-blue-light 100%
+    );
+    display: flex;
+    position: relative;
 
-	@include respond(m){
-		transform:translateY(-5%);
-	}
-	@include respond(s){
-		transform:translateY(-20%);
-	}
-	@include respond(xs){
-		transform:translateY(-35%);
-	}
+    @include respond(m) {
+        transform: translateY(-5%);
+    }
+    @include respond(s) {
+        transform: translateY(-20%);
+    }
+    @include respond(xs) {
+        transform: translateY(-35%);
+    }
 
-	
-	&__img{
-		
+    &__img {
+        width: 35%;
+        cursor: pointer;
+        z-index: 7;
+        transition: transform 0.2s;
 
-		width:35%;
-		cursor:pointer;
-		z-index: 7;
-		transition: transform .2s;
+        &--1 {
+            transform: translate(40%, -10%);
+            z-index: 8;
 
-		&--1{
-			transform:translate(40%,-10%);
-			z-index: 8;
-			
-			&:hover{
-				transform: translate(40%,-10%) scale(1.15);
-			}
+            &:hover {
+                transform: translate(40%, -10%) scale(1.05);
+            }
 
-			@include respond(xs){
-				transform:translate(30%,-10%);
-				width:65%;
+            @include respond(xs) {
+                transform: translate(30%, -10%);
+                width: 65%;
 
-				&:hover{
-					transform: scale(1.15) translate(25%,0%);
-				}
-			}
-
-			
-		}
-		&--2{
-			transform:translate(30%,0);
-			&:hover{
-				transform: translate(30%,0) scale(1.15);
-				z-index: 9;
-			}
-			@include respond(xs){
-				display:none;
-			}
-			
-		}
-		
-	}
+                &:hover {
+                    transform: scale(1.05) translate(25%, 0%);
+                }
+            }
+        }
+        &--2 {
+            transform: translate(30%, 0);
+            &:hover {
+                transform: translate(30%, 0) scale(1.05);
+                z-index: 9;
+            }
+            @include respond(xs) {
+                display: none;
+            }
+        }
+    }
 }
