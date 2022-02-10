@@ -19,7 +19,7 @@
     "fs-extra": "^8.1.0",
     "handlebars": "^4.7.6",
     "multer": "^1.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "puppeteer": "^1.18.1"
   },
   "devDependencies": {
